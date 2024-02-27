@@ -1,113 +1,59 @@
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image'
+import PerformanceItem from '@/src/components/PerformanceItem';
+import styles from '@/src/styles/page.module.css';
 
-export default function Home() {
+
+const Home: React.FC = () => {
+  const gittan_logo = require('../public/gittan_logo.svg');
+  const main_img = require('../public/main_img.svg');
+  const performance_img1 = require('../public/performance_img1.svg');
+  const performance_img2 = require('../public/performance_img2.svg');
+  const performance_img3 = require('../public/performance_img3.svg');
+  const performance_img4 = require('../public/performance_img4.svg');
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.container}>
+
+        <div className={styles.header_container}>
+        <div className={styles.flexStart}>
+          <Image className={styles.logo_image} src={gittan_logo} alt='' />
+          <div className={styles.logoText}> 기탄산업개발</div>
+        </div>
+        <div className={styles.spacer} />
+        <div className={styles.menu_wrapper}>
+          <div className={styles.menuItem}>회사소개</div>
+          <div className={styles.menuItem}>사업소개</div>
+          <div className={styles.menuItem}>시공실적</div>
+          <div className={styles.menuItem}>견적문의</div>
+          <div className={styles.menuItem}>공식블로그</div>
+        </div>
+      </div>  
+
+    <div className="main_container">
+        <div className={styles.main_image}/>
+        <div className={styles.overlay}/>
+        <div className={styles.overlay_text}>내진보강공사 및 마이크로파일 & 헬리컬파일 시공 전문 업체<br />전국 전문가팀 파견시공<br />내진보강공사 무료상담</div>
+        <div className={styles.performance_text}>주요 시공 실적</div>
+        <div className={styles.flexContainer}>
+          <PerformanceItem src={performance_img1} alt='' text='강원OO초등학교' />
+          <PerformanceItem src={performance_img2} alt='' text='거제OO학교' />
+          <PerformanceItem src={performance_img3} alt='' text='꿈이랑도서관' />
+          <PerformanceItem src={performance_img4} alt='' text='대구OO도서관' />
+        </div>
+    </div>
+
+
+
+      <div className={styles.footer_container}>
+        <div className={styles.footer_text_wrapper}>
+          <div className={styles.footer_title_text }>기탄산업개발</div>
+          <div className={styles.footer_content_text}>상호명: 기탄산업 개발 | 대표자: 정원근 | 사업자번호: 699-05-02875 | 이메일 : gittan@naver.com<br />TEL: 031-853-5028 | FAX: 0504-327-5028 | 주소: 경기도 의정부시 오목로 235 제일프라자 2층 202호</div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
+
+export default Home;
