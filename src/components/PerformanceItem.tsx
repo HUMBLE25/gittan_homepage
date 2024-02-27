@@ -18,4 +18,3 @@ const PerformanceItem: React.FC<performanceItemProps> = ({ src, alt, text }) => 
 );
 
 export default PerformanceItem;
-
