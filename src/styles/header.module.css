@@ -5,13 +5,14 @@
     padding-right: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
-    margin: 0 auto;
+    margin: 0px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
-    /* border: 3px solid red; */
+    box-sizing: border-box;
+    border: 3px solid red;
 }
 
 .logo_wrapper {
@@ -53,6 +54,8 @@
 }
 
 .menuItem {
+    text-decoration: none;
+    color:inherit;
     position: relative; 
     display: inline-block; 
     color: black;
@@ -79,6 +82,10 @@
     width: 100%;
   }
   
+  .menuItem a{
+    text-decoration: none;
+    color:inherit;
+  }
 
 @media (max-width: 480px) {
     .header_container {

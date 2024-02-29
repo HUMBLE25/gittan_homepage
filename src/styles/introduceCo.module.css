@@ -1,27 +1,31 @@
-.container {
+.wrapper {
     width: 100%;
     height: 100%;
-    position: relative;
+    margin: 0px;
+    padding: 0px;
     background: white;
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    justify-content: space-around;
+    border: 2px solid violet;
 }
 
-.main_container {
-    width: 100%;
-    position: relative;
+.banner_container {
+    height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transition: all 1s ease;
+    border: 3px solid red;
 }
 
 .main_image {
     width: 100%;
     height: 520px;
-    left: 0;
-    top: 104px;
+    top: 0px;
     position: absolute;
     background-image: url(/introduce_main_img.svg);
     background-size: cover;
@@ -31,16 +35,14 @@
 .overlay {
     width: 100%;
     height: 520px;
-    left: 0;
-    top: 104px;
+    top: 0px;
     position: absolute;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
 }
 
 .overlay_text{
     width: 100%;
-    top: 306px; 
-    position: absolute;
+    position: relative;
     color: white;
     font-size: 64px;
     font-family: 'Nanum Gothic';
@@ -53,10 +55,8 @@
 .about_container {
     width: 300px;
     height: 75px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    top: 508px;
     position: absolute;
+    bottom: 0px;
     background: white;
     display: flex;
     justify-content: center;
@@ -76,14 +76,13 @@
 }
 
 .image_container {
-    position: absolute;
-    left: 255px;
-    top: 857px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
     gap: 30px;
+    border: 2px solid green;
 }
 
 .inner_container {
@@ -91,6 +90,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+    border: 2px solid red;
 }
 
 .small_image1 {
@@ -117,17 +117,25 @@
     background-position: center;
 }
 
+.greeting_wapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px 100px 0px;
+    border: 3px solid blue;
+}
+
 .greeting_container {
-    padding: 38px 48px 83px 47px;
-    position: absolute;
-    left: 255px;
-    top: 1649px;
+    width: 930px;
+    padding: 40px 30px 40px 30px;
     background: rgba(222, 234, 246, 0.50);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
     gap: 29px;
+    border: solid 2px #274FC1;
 }
 
 .greeting_inner_container {
@@ -166,3 +174,15 @@
     font-weight: 700;
     word-wrap: break-word;
 }
+
+@media (max-width: 480px) {
+
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+  }

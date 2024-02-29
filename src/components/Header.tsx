@@ -1,8 +1,8 @@
-// Header.tsx
-
+import Link from 'next/link';
 import styles from '@/src/styles/header.module.css';
 
 const Header: React.FC = () => {
+
     return (
         <div className={styles.header_container}>
             <div className={styles.logo_wrapper}>
@@ -11,11 +11,11 @@ const Header: React.FC = () => {
             </div>
             <div className={styles.spacer} />
             <div className={styles.menu_wrapper}>
-                <div className={styles.menuItem}>회사소개</div>
-                <div className={styles.menuItem}>사업소개</div>
-                <div className={styles.menuItem}>시공실적</div>
-                <div className={styles.menuItem}>견적문의</div>
-                <div className={styles.menuItem}>공식블로그</div>
+                <Link href="/introduceCo" className={styles.menuItem}>회사소개</Link>
+                <Link href="/microPiles" className={styles.menuItem}>사업소개</Link>
+                <Link href="/constructionPerformance" className={styles.menuItem}>시공실적</Link>
+                {/* <Link href="/estimateInquiry" className={styles.menuItem}>견적문의</Link> */}
+                <div className={styles.menuItem}><a href='https://blog.naver.com/gittan'>공식블로그</a></div>
             </div>
         </div>
     );
