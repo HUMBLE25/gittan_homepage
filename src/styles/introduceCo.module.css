@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: all 1s ease;
     border: 2px solid violet;
 }
 
@@ -30,6 +31,7 @@
     background-image: url(/introduce_main_img.svg);
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
 }
 
 .overlay {
@@ -38,6 +40,7 @@
     top: 0px;
     position: absolute;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+    transition: all 1s ease;
 }
 
 .overlay_text{
@@ -62,6 +65,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: all 1s ease;
 }
 
 .about_text {
@@ -73,6 +77,7 @@
     font-weight: 700;
     word-wrap: break-word;
     text-align: center;
+    transition: all 1s ease;
 }
 
 .image_container {
@@ -83,6 +88,7 @@
     margin-top: 100px;
     gap: 30px;
     border: 2px solid green;
+    transition: all 1s ease;
 }
 
 .inner_container {
@@ -91,6 +97,7 @@
     align-items: flex-start;
     gap: 30px;
     border: 2px solid red;
+    transition: all 1s ease;
 }
 
 .small_image1 {
@@ -99,6 +106,7 @@
     background-image: url(/introduce_img1.svg);
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
 }
 
 .small_image2 {
@@ -107,6 +115,7 @@
     background-image: url(/introduce_img2.svg);
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
 }
 
 .large_image {
@@ -115,6 +124,7 @@
     background-image: url(/introduce_img3.svg);
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
 }
 
 .greeting_wapper{
@@ -124,10 +134,11 @@
     align-items: center;
     margin: 100px 0px 100px 0px;
     border: 3px solid blue;
+    transition: all 1s ease;
 }
 
 .greeting_container {
-    width: 930px;
+    width: 870px;
     padding: 40px 30px 40px 30px;
     background: rgba(222, 234, 246, 0.50);
     display: flex;
@@ -136,6 +147,7 @@
     align-items: flex-end;
     gap: 29px;
     border: solid 2px #274FC1;
+    transition: all 1s ease;
 }
 
 .greeting_inner_container {
@@ -145,26 +157,29 @@
     align-items: flex-start;
     gap: 40px;
     align-self: stretch;
+    transition: all 1s ease;
 }
 
 .title {
-    width: 175px;
-    height: 72px;
+    width: 100%;
+    height: 10%;
     color: #274FC1;
     font-size: 32px;
     font-family: 'NanumGothic';
     font-weight: 800;
     letter-spacing: 1.60px;
     word-wrap: break-word;
+    transition: all 1s ease;
 }
 
 .content {
-    width: 835px;
+    width: 100%;
     color: black;
     font-size: 20px;
     font-family: 'NanumGothic';
     font-weight: 400;
     word-wrap: break-word;
+    transition: all 1s ease;
 }
 
 .signature {
@@ -173,16 +188,198 @@
     font-family: 'NanumGothic';
     font-weight: 700;
     word-wrap: break-word;
+    transition: all 1s ease;
 }
 
 @media (max-width: 480px) {
+    .banner_container {
+        height: 220px;
+    }
+    
+    .main_image {
+        height: 220px;
+    }
+    
+    .overlay {
+        height: 220px;
+    }
+    
+    .overlay_text{
+        font-size: 40px;
+    }
+    
+    .about_container {
+        width: 150px;
+        height: 30px;
+    }
+    
+    .about_text {
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+    }
 
+    .small_image1 {
+        width: 150px;
+        height: 100px;
+    }
+
+    .small_image2 {
+        width: 150px;
+        height: 100px;
+    }
+
+    .large_image {
+        width: 330px;
+        height: 180px;
+    }
+
+    .greeting_container {
+        width: 270px;
+    }
+
+    .greeting_inner_container {
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 8px;
+    }
+
+    .signature {
+        font-size: 12px;
+    }
   }
   
   @media (min-width: 481px) and (max-width: 768px) {
+    .banner_container {
+        height: 320px;
+    }
+    
+    .main_image {
+        height: 320px;
+    }
+    
+    .overlay {
+        height: 320px;
+    }
+    
+    .overlay_text{
+        font-size: 48px;
+    }
+    
+    .about_container {
+        width: 200px;
+        height: 45px;
+    }
+    
+    .about_text {
+        width: 150px;
+        height: 22px;
+        font-size: 18px;
+    }
 
+    .small_image1 {
+        width: 200px;
+        height: 160px;
+    }
+
+    .small_image2 {
+        width: 200px;
+        height: 160px;
+    }
+
+    .large_image {
+        width: 430px;
+        height: 200px;
+    }
+
+    .greeting_container {
+        width: 370px;
+    }
+
+    .greeting_inner_container {
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .content {
+        font-size: 12px;
+    }
+
+    .signature {
+        font-size: 16px;
+    }
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
 
+    .banner_container {
+        height: 420px;
+    }
+    
+    .main_image {
+        height: 420px;
+    }
+    
+    .overlay {
+        height: 420px;
+    }
+    
+    .overlay_text{
+        font-size: 56px;
+    }
+    
+    .about_container {
+        width: 250px;
+        height: 60px;
+    }
+    
+    .about_text {
+        width: 200px;
+        height: 24px;
+        font-size: 24px;
+    }
+
+    .small_image1 {
+        width: 300px;
+        height: 220px;
+    }
+
+    .small_image2 {
+        width: 300px;
+        height: 220px;
+    }
+
+    .large_image {
+        width: 630px;
+        height: 330px;
+    }
+
+    .greeting_container {
+        width: 570px;
+    }
+
+    .greeting_inner_container {
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+
+    .signature {
+        font-size: 20px;
+    }
   }
