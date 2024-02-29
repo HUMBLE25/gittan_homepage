@@ -5,7 +5,6 @@ const Footer = () => {
         <div className={styles.footer_container}>
             <div className={styles.footer_text_wrapper}>
                 <div className={styles.footer_title_text}>기탄산업개발</div>
-                
                 <div className={styles.footer_content_container}>
                     <div className={styles.footer_content}> 
                         <div>상호명: 기탄산업 개발</div> 
@@ -19,7 +18,7 @@ const Footer = () => {
                         <div> | 주소: 경기도 의정부시 오목로 235 제일프라자 2층 202호</div>
                     </div>
                 </div>
-               </div>
+            </div>
         </div>
     );
 };
