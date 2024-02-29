@@ -5,10 +5,10 @@ const Header: React.FC = () => {
 
     return (
         <div className={styles.header_container}>
-            <div className={styles.logo_wrapper}>
-                <div className={styles.logo_image} />
+            <Link href="/" className={styles.logo_wrapper}>
+                <div className={styles.logo_image}></div>
                 <div className={styles.logo_text} > 기탄산업개발</div>
-            </div>
+            </Link>
             <div className={styles.spacer} />
             <div className={styles.menu_wrapper}>
                 <Link href="/introduceCo" className={styles.menuItem}>회사소개</Link>

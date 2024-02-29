@@ -25,9 +25,11 @@
     )
     rgb(var(--background-start-rgb));
 } */
-body {
+
+html, body {
   color: rgb(var(--foreground-rgb));
-  /* background: rgb(var(--background-end-rgb)); */
+  margin: 0;
+  padding: 0;
 }
 @layer utilities {
   .text-balance {
