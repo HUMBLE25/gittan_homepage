@@ -1,13 +1,13 @@
 'use client'
 
 import React from 'react';
-import PerformanceItem from '@/src/components/PerformanceItem';
 import styles from '@/src/styles/page.module.css';
-import Header from '@/src/components/header';
-import Footer from '@/src/components/footer';
 import Banner from '@/src/components/banner';
 import '@/src/styles/globals.css'
 import Estimate from '@/src/components/estimate';
+import Footer from '@/src/components/footer';
+import Header from '@/src/components/header';
+import PerformanceItem from '@/src/components/performanceItem';
 
 const Home: React.FC = () => {
   const performance_img1 = '/performance_img1.svg';
