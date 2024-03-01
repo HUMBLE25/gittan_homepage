@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '@/src/styles/page.module.css';
 import Banner from '@/src/components/Banner';
 import '@/src/styles/globals.css'
-import Estimate from '@/src/components/estimate';
+import Estimate from '@/src/components/Estimate';
 import Footer from '@/src/components/Footer';
 import Header from '@/src/components/Header';
 import Item from '@/src/components/Item';
