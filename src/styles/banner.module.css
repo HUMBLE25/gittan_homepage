@@ -1,0 +1,95 @@
+.container{
+    position: relative;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.main_image {
+    height: 520px;
+    width: 100%;
+    top :0px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+}
+
+.overlay {
+    height: 520px;
+    width: 100%;
+    top :0px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.60);
+    transition: all 1s ease;
+}
+
+.overlay_text{
+    left: 10%;
+    right: 0%;
+    position: absolute;
+    color: white;
+    font-size: 36px;
+    font-family: 'Nanum Gothic';
+    font-weight: 600;
+    word-wrap: break-word;
+    transition: all 1s ease;
+    white-space: pre-line;
+}
+
+
+@media (max-width: 480px) {
+    .container{
+        height: 200px;
+    }
+
+    .main_image {
+        height: 200px;
+    }
+
+    .overlay {
+        height: 200px;
+    }
+    .overlay_text{
+        font-size: 18px;
+    }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container{
+        height: 320px;
+    }
+
+    .main_image {
+        height: 320px;
+    }
+
+    .overlay {
+        height: 320px;
+    }
+    .overlay_text{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container{
+        height: 420px;
+    }
+
+    .main_image {
+        height: 420px;
+    }
+
+    .overlay {
+        height: 420px;
+    }
+    .overlay_text{
+        font-size: 30px;
+    }
+}

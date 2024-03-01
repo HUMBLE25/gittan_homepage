@@ -2,12 +2,12 @@
 
 import React from 'react';
 import styles from '@/src/styles/page.module.css';
-import Banner from '@/src/components/banner';
+import Banner from '@/src/components/Banner';
 import '@/src/styles/globals.css'
 import Estimate from '@/src/components/estimate';
-import Footer from '@/src/components/footer';
-import Header from '@/src/components/header';
-import PerformanceItem from '@/src/components/performanceItem';
+import Footer from '@/src/components/Footer';
+import Header from '@/src/components/Header';
+import PerformanceItem from '@/src/components/PerformanceItem';
 
 const Home: React.FC = () => {
   const performance_img1 = '/performance_img1.svg';
