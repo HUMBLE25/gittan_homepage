@@ -2,13 +2,14 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/microPiles.module.css';
+import Link from 'next/link';
 const MicroPiles: React.FC  = () => {
     return (
         <div className={styles.wrapper}>
             <Header />  
             {/* 배너 */}
             <div className={styles.banner}>
-                <div className={styles.banner_img} style={{backgroundImage:`url(/)`}}/>
+                <div className={styles.banner_img} style={{backgroundImage:`url(/bIntroduce_img.svg)`}}/>
                 <div className={styles.banner_overlay} />
                 <div className={styles.banner_title}>사업소개</div>
                 <div className={styles.banner_menu}>
