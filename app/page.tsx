@@ -7,7 +7,7 @@ import '@/src/styles/globals.css'
 import Estimate from '@/src/components/estimate';
 import Footer from '@/src/components/Footer';
 import Header from '@/src/components/Header';
-import PerformanceItem from '@/src/components/PerformanceItem';
+import PerformanceItem from '@/src/components/Item';
 
 const Home: React.FC = () => {
   const performance_img1 = '/performance_img1.svg';

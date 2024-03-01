@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from '@/src/styles/performanceItem.module.css';
+import Styles from '@/src/styles/item.module.css';
 
 interface performanceItemProps {
     src: string;
