@@ -1,0 +1,333 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 1s ease;
+    border: 2px solid violet;
+}
+
+.banner {
+    width: 100%;
+    height: 727px;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.banner_img {
+    width: 100%;
+    height: 727px;
+    top: 0;
+    position: absolute;
+}
+
+.banner_overlay {
+    width: 100%;
+    height: 727px;
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.banner_title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 64px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.banner_menu {
+    width: 800px;
+    height: 75px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    background: white;
+    /* border: 4px solid red; */
+}
+
+.banner_menuItem1 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 32px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    word-wrap: break-word;
+    /* border: 3px solid green; */
+}
+
+.banner_menuItem2 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    word-wrap: break-word;
+    /* border: 3px solid blue; */
+}
+/* styles.css */
+.concept_container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid blue;
+    transition: all 1s ease;
+}
+
+.concept_title{
+    font-size: 48px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    transition: all 1s ease;
+}
+
+.concept_background {
+    width: 80%;
+    height: 110px;
+    background: rgba(222, 234, 246, 0.50);
+    color: black;
+    font-size: 20px;
+    font-family: Nanum Gothic;
+    font-weight: 400;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+
+.feature_container {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    mix-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 10px solid green;
+}
+
+.feature_wrapper{
+    width: 1300px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    /* border: 3px solid blue; */
+}
+.feature_top{
+    width: 650px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 3px solid red; */
+}
+
+.feature_icon {
+    width: 54px;
+    height: 61px;
+    background-image: url(/arrow.svg);
+    background-size: cover;
+    background-position: center;
+    /* border: 3px solid blue; */
+}
+
+.feature_text {
+    width: 510px;
+    height: 100%;
+    color: #363636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-family: Nanum Gothic;
+    font-size: 400;
+    word-wrap: break-word;
+    /* border: 3px solid green; */
+}
+
+.feature_background {
+    width: 1300px;
+    height: 500px;
+    position: relative;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px black solid;
+}
+
+.feature_description {
+    width: 800px;
+    height: 177px;
+    color: black;
+    font-size: 20px;
+    font-family: Nanum Gothic;
+    font-size: 400;
+    word-wrap: break-word;
+    /* border: 3px solid red; */
+}
+
+.feature_image {
+    width: 253px;
+    height: 473px;
+    background-image: url(/micro_feature_img.svg);
+    /* border: 3px solid red; */
+}
+
+.common_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+
+.common_title{
+    width: 1300px;
+    height: 110px;
+    position: relative;
+    background-color: #004D7B;
+    color: white;
+    font-size: 32px;
+    font-family: Nanum Gothic;
+    font-size: 400;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    border: 1px solid black;
+}
+
+.apply_background{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    /* border: 2px solid red; */
+}
+
+.apply_description {
+    width: 542px;
+    height: 200px;
+    position: relative;
+    color: 'black';
+    font-size: 20px;
+    font-family: Nanum Gothic;
+    font-weight: 400;
+    word-wrap: break-word;
+    /* border: 2px solid green; */
+}
+
+.apply_image {
+    width: 564px;
+    height: 352px;
+    position: relative;
+    mix-blend-mode: darken;
+    background-image: url(/micro_apply_img.svg);
+    /* border: 3px solid blue; */
+}
+
+.build_background{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    /* border: 2px solid red; */
+}
+
+.build_image{
+    width: 1200px;
+    height: 600px;
+    background-image: url(/micro_build_img.svg);
+    background-size: cover;
+    background-position: center;
+    /* border: 2px solid green; */
+}
+
+.plan_background{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: 2px solid red;
+}
+
+.plan_image{
+    width: 90%;
+    height: 100%;
+    background-image: url(/micro_plan_img.svg);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid green;
+}
+
+.explain_background{
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 20px;
+}
+.explain_image_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    /* border: 2px solid yellow; */
+}
+.explain_image{
+    width: 400px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    /* border: 2px solid red; */
+}
