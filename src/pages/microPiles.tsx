@@ -13,8 +13,8 @@ const MicroPiles: React.FC  = () => {
                 <div className={styles.banner_overlay} />
                 <div className={styles.banner_title}>사업소개</div>
                 <div className={styles.banner_menu}>
-                    <div className={styles.banner_menuItem1}>MICRO PILES 공법</div>
-                    <div className={styles.banner_menuItem2}>HELIX PILES 공법</div>
+                    <Link  href='/microPiles' className={styles.banner_menuItem1}>MICRO PILES 공법</Link>
+                    <Link href='/helixPiles' className={styles.banner_menuItem2}>HELIX PILES 공법</Link>
                 </div>
             </div>
 
