@@ -7,7 +7,7 @@ import '@/src/styles/globals.css'
 import Estimate from '@/src/components/estimate';
 import Footer from '@/src/components/Footer';
 import Header from '@/src/components/Header';
-import PerformanceItem from '@/src/components/Item';
+import Item from '@/src/components/Item';
 
 const Home: React.FC = () => {
   const performance_img1 = '/performance_img1.svg';
@@ -27,10 +27,10 @@ const Home: React.FC = () => {
       <div className={styles.main_container}>
         <div className={styles.performance_text}>주요 시공 실적</div>
         <div className={styles.flex_container}>
-          <PerformanceItem src={performance_img1}  text='강원OO초등학교' />
-          <PerformanceItem src={performance_img2}  text='거제OO학교' />
-          <PerformanceItem src={performance_img3}  text='꿈이랑도서관' />
-          <PerformanceItem src={performance_img4}  text='대구OO도서관' />
+          <Item src={performance_img1}  text='강원OO초등학교' />
+          <Item src={performance_img2}  text='거제OO학교' />
+          <Item src={performance_img3}  text='꿈이랑도서관' />
+          <Item src={performance_img4}  text='대구OO도서관' />
         </div>
       </div>
       

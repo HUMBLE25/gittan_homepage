@@ -1,12 +1,12 @@
 import React from 'react';
 import Styles from '@/src/styles/item.module.css';
 
-interface performanceItemProps {
+interface ItemProps {
     src: string;
     text: string;
 }
 
-const PerformanceItem: React.FC<performanceItemProps> = ({ src, text }) => (
+const PerformanceItem: React.FC<ItemProps> = ({ src, text }) => (
     <div className={Styles.container}>
         <div className={Styles.performance_image}  style={{backgroundImage: `url(${src})`}}/>
         <div className={Styles.layer}/>
