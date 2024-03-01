@@ -1,0 +1,110 @@
+.container {
+    width: 500px;
+    height: 500px;
+    position:  absolute; 
+    background: white;
+    left: 60%;
+    top: 30%;
+    display: block;
+    z-index: 1;
+  }
+  
+  .image_container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 500px;
+    height: 500px;
+    background-image: url(/popup_img.svg);
+    filter: brightness(50%);
+  }
+
+  .text {
+    width: 380px;
+    height: 100px;
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    font-family: 'Nanum Gothic';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .company_name {
+    width: 190px;
+    color: white;
+    top: 45px;
+    position: absolute;
+    font-size: 32px;
+    font-family: 'Nanum Gothic';
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .inquiry_text {
+    top: 134px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-family: 'Nanum Gothic';
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .footer {
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .footer_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .do_not_show {
+    width: 170px;
+    height: 41px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Nanum Gothic';
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .checkbox {
+    width: 30px;
+    height: 30px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  
+  .close_button {
+    width: 40px;
+    height: 41px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Nanum Gothic';
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  

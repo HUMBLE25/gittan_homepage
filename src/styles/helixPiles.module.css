@@ -231,7 +231,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .feature_image {
@@ -241,7 +241,7 @@
     background-size: cover;
     background-position: center;
     transition: all 1s ease;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .common_container {
@@ -455,7 +455,7 @@
         height: 500px;
     }
     .explain_background{
-        height: 700px;
+        height: 500px;
     }
 
     .explain_image{
@@ -548,7 +548,7 @@
         height: 600px;
     }
     .explain_background{
-        height: 800px;
+        height: 600px;
     }
 
     .explain_image{
@@ -643,7 +643,7 @@
     }
 
     .explain_background{
-        height: 900px;
+        height: 700px;
     }
 
     .explain_image{

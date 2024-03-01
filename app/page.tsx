@@ -1,9 +1,12 @@
+'use client'
+
 import React from 'react';
 import PerformanceItem from '@/src/components/PerformanceItem';
 import styles from '@/src/styles/page.module.css';
 import Header from '@/src/components/Header';
 import Footer from '@/src/components/Footer';
 import Banner from '@/src/components/banner';
+import Estimate from '@/src/components/estimate';
 
 const Home: React.FC = () => {
   const performance_img1 = '/performance_img1.svg';
@@ -17,7 +20,7 @@ const Home: React.FC = () => {
     <div className={styles.wrapper}>
 
       <Header/>
-
+      <Estimate/>
       <Banner img={main_image} text={bannerText}/>
 
       <div className={styles.main_container}>
