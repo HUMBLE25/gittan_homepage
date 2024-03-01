@@ -3,8 +3,8 @@
 import React from 'react';
 import PerformanceItem from '@/src/components/PerformanceItem';
 import styles from '@/src/styles/page.module.css';
-import Header from '@/src/components/Header';
-import Footer from '@/src/components/Footer';
+import Header from '@/src/components/header';
+import Footer from '@/src/components/footer';
 import Banner from '@/src/components/banner';
 import '@/src/styles/globals.css'
 import Estimate from '@/src/components/estimate';
