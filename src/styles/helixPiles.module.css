@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     transition: all 1s ease;
-    border: 2px solid violet;
+    /* border: 2px solid violet; */
 }
 
 .banner {
