@@ -86,11 +86,8 @@ const MicroPiles: React.FC  = () => {
             <div className={styles.common_container}>
                 <div className={styles.common_title}>MICRO PILE 시공설명서</div>
                 <div className={styles.explain_background}>
-                <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img4.svg)`}}></div>    
-                    <div className={styles.explain_image_container}>
-                        <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img3.svg)`}}></div>
-                        <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img2.svg)`}}></div>
-                    </div>
+                <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img3.svg)`}}></div>    
+                <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img2.svg)`}}></div>
                 <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img1.svg)`}}></div>
                 </div>
             </div>
