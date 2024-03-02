@@ -88,7 +88,7 @@
     position: absolute;
     bottom: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 200px;
     background: rgba(0, 0, 0, 0.75);
@@ -98,14 +98,15 @@
 
   .footer_content{
     display: flex;
+    width: 230px;
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
-    /* border: 2px solid red; */
+    border: 2px solid red;
   }
 
   .do_not_show {
-    width: 170px;
+    width: 200px;
     height: 40px;
     color: white;
     margin: 0;
@@ -117,7 +118,7 @@
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1s ease;
-    /* border: 2px solid orange; */
+    border: 2px solid orange;
   }
 
   .checkbox {
