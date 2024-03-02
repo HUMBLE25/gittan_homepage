@@ -70,14 +70,14 @@ const HelixPiles = () => {
             </div>
             {/* 시공도면 */}
             <div className={styles.common_container}>
-                <div className={styles.common_title}>MICRO PILE 시공도면</div>
+                <div className={styles.common_title}>HELIX PILE 시공도면</div>
                 <div className={styles.plan_background}>
                     <div className={styles.plan_image}></div>
                 </div>
             </div>
             {/* 시공설명서 */}
             <div className={styles.common_container}>
-                <div className={styles.common_title}>MICRO PILE 시공도면</div>
+                <div className={styles.common_title}>HELIX PILE 시공설명서</div>
                 <div className={styles.explain_background}>
                     <div className={styles.explain_image} style={{backgroundImage : `url(/helix_explain_img1.svg)`}}></div>    
                     <div className={styles.explain_image} style={{backgroundImage : `url(/helix_explain_img2.svg)`}}></div>

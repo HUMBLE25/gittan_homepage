@@ -10,6 +10,7 @@
     box-sizing: border-box;
     /* border: 3px solid red; */
     transition: all 1s ease; 
+    padding-left: 2%;
 }
 
 .footer_text_wrapper {

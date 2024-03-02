@@ -144,6 +144,7 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
+    padding: 0px 5% 0px 5%;
 }
 
 
@@ -185,7 +186,7 @@
 
 .feature_icon {
     width: 55px;
-    height: 60px;
+    height: 40px;
     background-image: url(/arrow.svg);
     background-size: cover;
     background-position: center;
@@ -215,12 +216,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px black solid;
+    border: 1px black solid;
     transition: all 1s ease;
 }
 
 .feature_description {
-    width: 50%;
+    width: 75%;
     height: 200px;
     color: black;
     font-size: 20px;
@@ -234,11 +235,20 @@
     /* border: 3px solid red; */
 }
 
+.feature_description ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+
+}
+
 .feature_image {
-    width: 50%;
-    height: 75%;
+    width: 40%;
+    height: 100%;
     background-image: url(/helix_feature_img.svg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
     /* border: 3px solid red; */
@@ -284,8 +294,8 @@
 }
 
 .apply_description {
-    width: 50%;
-    height: 200px;
+    width: 65%;
+    /* height: 200px; */
     position: relative;
     color: 'black';
     font-size: 20px;
@@ -297,12 +307,12 @@
 }
 
 .apply_image {
-    width: 50%;
+    width: 35%;
     height: 60%;
     position: relative;
     mix-blend-mode: darken;
     background-image: url(/helix_apply_img.svg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
     /* border: 3px solid blue; */
@@ -323,7 +333,7 @@
     width: 100%;
     height: 90%;
     background-image: url(/helix_build_img.svg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
     /* border: 2px solid green; */
@@ -344,7 +354,7 @@
     width: 100%;
     height: 70%;
     background-image: url(/helix_plan_img.svg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     /* border: 3px solid green; */
     transition: all 1s ease;
@@ -365,7 +375,7 @@
 .explain_image{
     width: 400px;
     height: 600px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
     /* border: 2px solid red; */
@@ -415,12 +425,12 @@
     }
 
     .feature_icon {
-        width: 35px;
-        height: 40px;
+        width: 30px;
+        height: 25px;
     }
 
     .feature_text {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .feature_background {
@@ -459,8 +469,8 @@
     }
 
     .explain_image{
-        width: 100px;
-        height: 300px;
+        width: 150px;
+        height: 250px;
     }
   }
 
@@ -509,11 +519,11 @@
 
     .feature_icon {
         width: 45px;
-        height: 50px;
+        height: 30px;
     }
 
     .feature_text {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .feature_background {
@@ -553,7 +563,7 @@
 
     .explain_image{
         width: 200px;
-        height: 400px;
+        height: 300px;
     }
 }
 
@@ -602,11 +612,11 @@
 
     .feature_icon {
         width: 50px;
-        height: 55px;
+        height: 35px;
     }
 
     .feature_text {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .feature_background {
@@ -647,7 +657,7 @@
     }
 
     .explain_image{
-        width: 300px;
-        height: 500px;
+        width: 250px;
+        height: 350px;
     }
 }
