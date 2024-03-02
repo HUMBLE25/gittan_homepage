@@ -288,7 +288,7 @@
 
 .apply_background{
     width: 90%;
-    height: 500px;
+    height:400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,15 +309,15 @@
     /* border: 2px solid green; */
 }
 .apply_description ul{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
+    padding-left: 40px;
     /* border: 2px solid red; */
 }
 .apply_image {
-    width: 35%;
-    height: 60%;
+    width: 60%;
+    height: 100%;
     position: relative;
     mix-blend-mode: darken;
     background-image: url(/helix_apply_img.svg);
