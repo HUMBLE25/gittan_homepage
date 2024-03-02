@@ -52,7 +52,7 @@
 
 @media (max-width: 480px) {
     .footer_container {
-        height: 100px;
+        height: 75px;
     }
     .footer_title_text{
         font-size: 12px;

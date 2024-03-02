@@ -274,7 +274,7 @@
     position: relative;
     background-color: #004D7B;
     color: white;
-    font-size: 32px;
+    font-size: 48px;
     font-family: Nanum Gothic;
     font-size: 400;
     word-wrap: break-word;
@@ -306,7 +306,13 @@
     transition: all 1s ease;
     /* border: 2px solid green; */
 }
-
+.apply_description ul{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    /* border: 2px solid red; */
+}
 .apply_image {
     width: 35%;
     height: 60%;
@@ -448,8 +454,8 @@
     }
 
     .common_title{
-        height: 60px;
-        font-size: 20px;
+        height: 40px;
+        font-size: 16px;
     }
 
     .apply_background{
@@ -459,7 +465,9 @@
     .apply_description {
         font-size: 10px;
     }
-
+    .apply_description ul{
+        padding-left: 20px;
+    }
     .build_background{
         height: 200px;
     }

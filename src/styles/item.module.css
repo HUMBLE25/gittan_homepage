@@ -17,7 +17,7 @@
     background-size: cover;
     background-position: center;
     transition: all 1s ease;
-    border: 2px solid yellow;
+    border: 1px solid #003399;
 }
 
 .layer{

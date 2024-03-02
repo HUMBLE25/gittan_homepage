@@ -1,8 +1,6 @@
 .header_container {
     width: 100%; 
-    /* height: 10%; */
     padding: 0% 2% 0% 2%;
-    /* margin: 0px; */
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -19,9 +17,9 @@
     position: relative;
     transition: all 1s ease;
     text-decoration: none;
-    /* border: 2px solid green; */
     padding: 0.5%;
     gap:3%
+    /* border: 2px solid green; */
 }
 
 .logo_image{
@@ -103,7 +101,7 @@
         height: 30px;
     }
     .logo_text{
-        font-size: 18px;
+        font-size: 14px;
     }
     .menuItem {
         font-size: 8px;

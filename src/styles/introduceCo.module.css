@@ -141,7 +141,7 @@
 }
 
 .greeting_container {
-    width: 870px;
+    width: 850px;
     padding: 40px 30px 40px 30px;
     background: rgba(222, 234, 246, 0.50);
     display: flex;
@@ -151,6 +151,7 @@
     gap: 29px;
     /* border: solid 2px #274FC1; */
     transition: all 1s ease;
+    margin-bottom: 100px;
 }
 
 .greeting_inner_container {
@@ -238,7 +239,8 @@
     }
 
     .greeting_container {
-        width: 270px;
+        width: 250px;
+        margin-bottom: 20px;
     }
 
     .greeting_inner_container {
