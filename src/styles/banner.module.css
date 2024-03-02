@@ -9,7 +9,7 @@
 }
 
 .main_image {
-    height: 520px;
+    height: 100%;
     width: 100%;
     top :0px;
     position: absolute;
@@ -19,7 +19,7 @@
 }
 
 .overlay {
-    height: 520px;
+    height: 100%;
     width: 100%;
     top :0px;
     position: absolute;
@@ -43,15 +43,7 @@
 
 @media (max-width: 480px) {
     .container{
-        height: 220px;
-    }
-
-    .main_image {
-        height: 200px;
-    }
-
-    .overlay {
-        height: 200px;
+        height: 420px;
     }
     .overlay_text{
         font-size: 18px;
@@ -64,14 +56,6 @@
     .container{
         height: 320px;
     }
-
-    .main_image {
-        height: 320px;
-    }
-
-    .overlay {
-        height: 320px;
-    }
     .overlay_text{
         font-size: 24px;
     }
@@ -79,14 +63,6 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .container{
-        height: 420px;
-    }
-
-    .main_image {
-        height: 420px;
-    }
-
-    .overlay {
         height: 420px;
     }
     .overlay_text{
