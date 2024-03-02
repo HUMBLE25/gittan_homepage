@@ -322,8 +322,8 @@
     /* border: 2px solid red; */
 }
 .apply_image {
-    width: 45%;
-    height: 60%;
+    width: 40%;
+    height: 90%;
     position: relative;
     mix-blend-mode: darken;
     background-image: url(/micro_apply_img.svg);
