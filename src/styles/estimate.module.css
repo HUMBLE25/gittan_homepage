@@ -102,7 +102,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .do_not_show {
@@ -118,7 +118,7 @@
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1s ease;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
   }
 
   .checkbox {
