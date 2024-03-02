@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     transition: all 1s ease; 
-    /* border: 3px solid green; */
+    border: 3px solid green;
 }
 
 .footer_title_text {
@@ -31,11 +31,11 @@
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1s ease; 
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .footer_content_container{
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .footer_content{
     display: flex;
@@ -67,6 +67,9 @@
     }
     .footer_content div{
         font-size: 8px;
+    }
+    .footer_text_wrapper {
+        gap: 5px;
     }
   }
 
