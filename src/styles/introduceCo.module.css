@@ -47,7 +47,7 @@
     width: 100%;
     position: relative;
     color: white;
-    font-size: 64px;
+    font-size: 56px;
     font-family: 'Nanum Gothic';
     font-weight: 700;
     word-wrap: break-word;
@@ -56,8 +56,8 @@
 }
 
 .about_container {
-    width: 300px;
-    height: 75px;
+    width: 250px;
+    height: 70px;
     position: absolute;
     bottom: 0px;
     background: white;
@@ -72,12 +72,15 @@
     width: 240px;
     height: 28px;
     color: black;
-    font-size: 32px;
+    font-size: 26px;
     font-family: 'Nanum Gothic';
     font-weight: 700;
     word-wrap: break-word;
     text-align: center;
     transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image_container {
@@ -205,18 +208,18 @@
     }
 
     .overlay_text{
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .about_container {
-        width: 150px;
-        height: 30px;
+        width: 100px;
+        height: 25px;
     }
 
     .about_text {
         width: 100px;
         height: 20px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .small_image1 {
@@ -269,18 +272,18 @@
     }
 
     .overlay_text{
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .about_container {
-        width: 200px;
+        width: 150px;
         height: 45px;
     }
 
     .about_text {
         width: 150px;
         height: 22px;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .small_image1 {
@@ -334,18 +337,18 @@
     }
 
     .overlay_text{
-        font-size: 56px;
+        font-size: 48px;
     }
 
     .about_container {
-        width: 250px;
-        height: 60px;
+        width: 200px;
+        height: 55px;
     }
 
     .about_text {
         width: 200px;
         height: 24px;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .small_image1 {
