@@ -11,15 +11,16 @@
 }
 
 .logo_wrapper {
+    width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     transition: all 1s ease;
     text-decoration: none;
     padding: 0.5%;
-    gap:3%
-    /* border: 2px solid green; */
+    gap:1%;
+    border: 2px solid green;
 }
 
 .logo_image{
@@ -29,18 +30,19 @@
     background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 .logo_text {
-    width: 90%;
+    width: 100%;
     color: black;
     font-size: 28px;
     font-family: 'Nanum Gothic';
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1s ease; 
-    /* border: 2px solid black; */
+    padding-left: 2%;
+    border: 2px solid black;
 }
 
 .spacer{
@@ -96,6 +98,9 @@
         width: 45px;
         height: 10px;
     }
+    .logo_wrapper{
+        width: 40%;
+    }
     .logo_image{
         width: 30px; 
         height: 30px;
@@ -113,6 +118,9 @@
         width: 40px;
         height: 20px;
     }
+    .logo_wrapper{
+        width: 35%;
+    }
     .logo_image{
         width: 40px; 
         height: 40px;
@@ -129,6 +137,9 @@
     .spacer{
         width: 40px;
         height: 60px;
+    }
+    .logo_wrapper{
+        width: 30%;
     }
     .logo_text{
         font-size: 24px;
