@@ -13,7 +13,7 @@
 
 .main_container{
     display: flex;
-    height: 500px;
+    height: 800px;
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -32,6 +32,8 @@
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1.5s ease;
+    /* border: 2px solid green; */
+    margin: 60px 0px 60px 0px;
 }
 
 .flex_container {
@@ -44,6 +46,7 @@
     transition: all 1.5s ease;
     /* border: 1px solid red; */
     /* padding: 0% 5% 0% 5%; */
+    /* margin: 2% 0% 2% 0%; */
   } 
 
   .flex_container_sub {
@@ -61,6 +64,7 @@
   @media (max-width: 480px) {
         .performance_text{
             font-size: 12px;
+            margin: 0;
         }
         .main_container{
             height: 250px;
