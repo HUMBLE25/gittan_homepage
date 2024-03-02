@@ -383,15 +383,16 @@
     justify-content: center;
     transition: all 1s ease;
     /* border: 3px solid red; */
+    margin-bottom: 100px;
 }
 .explain_image{
-    width: 300px;
-    height: 100%;
+    width: 500px;
+    height: 115%;
     background-size: 100% 100%;
     background-position: center;
     transition: all 1s ease;
     /* border: 2px solid red; */
-    margin: 0px 10px 0px 10px;
+    margin: 0px 20px 0px 20px;
     box-sizing: border-box;
 }
 
