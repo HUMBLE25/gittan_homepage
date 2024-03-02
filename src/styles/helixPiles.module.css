@@ -242,11 +242,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     /* border: 2px solid red; */
-
+}
+.feature_description ul li{
+    white-space: pre-line;
 }
 
 .feature_image {
-    width: 40%;
+    width: 45%;
     height: 100%;
     background-image: url(/helix_feature_img.svg);
     background-size: 100% 100%;
@@ -447,6 +449,7 @@
 
     .feature_description {
         font-size: 10px;
+        width: 65%;
     }
     .common_container{
         /* height: 300px; */

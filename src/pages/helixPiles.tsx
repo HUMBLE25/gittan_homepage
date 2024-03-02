@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/helixPiles.module.css';
 import Link from 'next/link';
+
 const HelixPiles = () => {
+    const [featureText1, setFeatureText1] = useState(`특성화한 장비와 백호우와의 결합만으로\n시공시 조립이 간편`);
+    const [featureText2, setFeatureText2] = useState(`어떠한 각도에서도 시공이 가능하므로\n경사시공에 용이`);
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth < 480) { 
+            setFeatureText1(`특성화한 장비와 백호우와의 결합만으로\n시공시 조립이 간편`);
+            setFeatureText2(`어떠한 각도에서도 시공이 가능하므로\n경사시공에 용이`);
+          } else {
+            setFeatureText1(`특성화한 장비와 백호우와의 결합만으로 시공시 조립이 간편`);
+            setFeatureText2(`어떠한 각도에서도 시공이 가능하므로 경사시공에 용이`);
+          }
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        handleResize();
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
     return (
         <div className={styles.wrapper}>
             <Header />
@@ -35,11 +57,11 @@ const HelixPiles = () => {
                     <div className={styles.feature_background} >
                         <div className={styles.feature_description}>
                             <ul>
-                                <li>특성화한 장비와 백호우와의 결합만으로 시공시 조립이 간편</li>
+                                <li>{featureText1}</li>
                                 <li>일체화한 파일시공으로 공기단축 (300m/Day)</li>
                                 <li>무소음, 무진동 공법으로 친환경적</li>
                                 <li>비배토 공법으로 슬라임이 발행하지 않음</li>
-                                <li>어떠한 각도에서도 시공이 가능하므로 경사시공에 용이</li>
+                                <li>{featureText2}</li>
                             </ul>
                         </div>
                         <div className={styles.feature_image} />
