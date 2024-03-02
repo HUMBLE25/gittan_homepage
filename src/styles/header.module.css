@@ -71,6 +71,7 @@
     word-wrap: break-word;
     transition: all 1s ease;
     cursor: pointer;
+    /* border: 2px solid red; */
   }
 
   .menuItem::after {
@@ -107,6 +108,9 @@
     }
     .logo_text{
         font-size: 14px;
+    }
+    .menu_wrapper{
+        gap: 10px;
     }
     .menuItem {
         font-size: 8px;
