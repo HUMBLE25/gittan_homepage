@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '@/src/styles/page.module.css';
 import Banner from '@/src/components/Banner';
 import '@/src/styles/globals.css'
@@ -18,9 +18,26 @@ const Home: React.FC = () => {
   const performance_img6 = '/cPerformance7.svg';
   const performance_img7 = '/cPerformance8.svg';
   const performance_img8 = '/cPerformance9.svg';
+  const [bannerText, setBannerText] = useState(`내진보강공사 및 마이크로파일 & 헬리컬파일 시공 전문 업체\n전국 전문가팀 파견시공\n내진보강공사 무료상담`);
   const main_image = '/main_img.svg';
-  const bannerText = `내진보강공사 및 마이크로파일\n헬리컬파일 시공 전문 업체\n전국 전문가팀 파견시공\n내진보강공사 무료상담`;
-  
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) { 
+        setBannerText(`내진보강공사 및 마이크로파일 \n 헬리컬파일 시공 전문 업체\n전국 전문가팀 파견시공\n내진보강공사 무료상담`);
+      } else {
+        setBannerText(`내진보강공사 및 마이크로파일 & 헬리컬파일 시공 전문 업체\n전국 전문가팀 파견시공\n내진보강공사 무료상담`);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div className={styles.wrapper}>
 
