@@ -247,9 +247,9 @@
 }
 
 .feature_image {
-    width: 15%;
-    height: 15%; 
-    padding: 10%;
+    width: 50%;
+    height: 100%; 
+    /* padding: 10%; */
     background-image: url(/micro_feature_img.svg);
     background-size: 100% 100%;
     background-position: center;
