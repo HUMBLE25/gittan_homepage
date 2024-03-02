@@ -7,7 +7,7 @@ const Header: React.FC = () => {
         <div className={styles.header_container}>
             <Link href="/" className={styles.logo_wrapper}>
                 <div className={styles.logo_image}></div>
-                <div className={styles.logo_text} > 기탄산업개발</div>
+                <div className={styles.logo_text} >기탄산업개발</div>
             </Link>
             <div className={styles.spacer} />
             <div className={styles.menu_wrapper}>

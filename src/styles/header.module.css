@@ -16,11 +16,16 @@
 }
 
 .logo_wrapper {
+    /* width: 20%; */
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
     transition: all 1s ease;
     text-decoration: none;
+    /* border: 2px solid green; */
+    padding: 0.5%;
+    gap:4%
 }
 
 .logo_image{
@@ -30,16 +35,18 @@
     background-size: cover;
     background-position: center;
     transition: all 1s ease;
+    /* border: 2px solid red; */
 }
 
 .logo_text {
-    width: 100%;
+    width: 90%;
     color: black;
     font-size: 28px;
     font-family: 'Nanum Gothic';
     font-weight: 600;
     word-wrap: break-word;
     transition: all 1s ease; 
+    /* border: 2px solid black; */
 }
 
 .spacer{
