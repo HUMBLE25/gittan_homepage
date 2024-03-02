@@ -264,10 +264,10 @@
     height: 100%;
     position: relative;
     display: flex;
-    margin-bottom: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
     transition: all 1s ease;
     /* border: 3px solid green; */
 }
