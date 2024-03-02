@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
+    /* border: 2px solid red; */
   }
 
   .image {
@@ -29,7 +30,7 @@
   }
 
   .text {
-    width: 380px;
+    width: 80%;
     height: 100px;
     position: absolute;
     font-size: 16px;
@@ -38,11 +39,12 @@
     font-weight: 400;
     word-wrap: break-word;
     transition: all 1s ease;
-    /* border: 1px solid red; */
+    /* border: 1px solid beige; */
+    padding: 0% 2%  0% 2%;
   }
 
   .company_name {
-    width: 190px;
+    width: 40%;
     color: white;
     top: 45px;
     position: absolute;
@@ -52,6 +54,8 @@
     word-wrap: break-word;
     transition: all 1s ease;
     /* border: 2px solid red; */
+    /* padding: 0% 5%  0% 5%; */
+    margin: 0% 5%  0% 5%;
   }
 
   .inquiry_text {
@@ -72,23 +76,24 @@
     position: absolute;
     bottom: 0px;
     display: flex;
-    justify-content: center;
-    gap: 200px;
+    justify-content: space-around;
     align-items: center;
+    gap: 200px;
     background: rgba(0, 0, 0, 0.75);
     transition: all 1s ease;
   }
 
   .footer_content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
+    /* border: 2px solid red; */
   }
 
   .do_not_show {
     width: 170px;
-    height: 41px;
+    height: 40px;
     color: white;
     display: flex;
     justify-content: center;
@@ -135,7 +140,7 @@
     .text {
       width: 200px;
       height: 40px;
-      font-size: 10px;
+      font-size: 8px;
       top: 100px;
     }
 
@@ -153,6 +158,9 @@
     .footer {
       height: 30px;
       gap: 10px;
+    }
+    .footer_content {
+      width: 130px;
     }
 
     .do_not_show {
@@ -181,13 +189,14 @@
   }
 
   .text {
-    width: 260px;
+    width: 250px;
     height: 40px;
-    font-size: 12px;
+    font-size: 10px;
     top: 160px;
   }
 
   .company_name {
+    width: 165px;
     font-size: 28px;
   }
 
@@ -198,7 +207,7 @@
 
   .footer {
     height: 60px;
-    gap: 150px;
+    gap: 80px;
   }
 
   .do_not_show {
@@ -213,9 +222,9 @@
   }
 
   .close_button {
-    width: 20px;
+    width: 30px;
     height: 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -226,7 +235,7 @@
   }
 
   .text {
-    width: 260px;
+    width: 295px;
     height: 55px;
     font-size: 12px;
   }
@@ -237,12 +246,13 @@
   }
 
   .inquiry_text {
+    top: 110px;
     font-size: 20px;
   }
 
   .footer {
     height: 90px;
-    gap: 150px;
+    gap: 120px;
   }
 
   .do_not_show {
