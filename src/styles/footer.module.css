@@ -14,13 +14,14 @@
 }
 
 .footer_text_wrapper {
-    width: 100%;
+    /* width: 100%; */
     gap: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     transition: all 1s ease; 
+    /* border: 3px solid green; */
 }
 
 .footer_title_text {
