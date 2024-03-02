@@ -1,6 +1,6 @@
 .container{
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 220px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -58,8 +58,6 @@
        font-size: 8px; 
    }
 }
-
-
 
   @media (min-width: 481px) and (max-width: 768px) {
     .container{
