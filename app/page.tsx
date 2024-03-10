@@ -67,7 +67,7 @@ const Home: React.FC = () => {
       <Estimate/>
       <div className={styles.banner} ref={sectionRef} >
           <div className={styles.main_image}  style={{backgroundImage:`url(${main_image[index]})`}}/>
-          <div className={styles.overlay}/>
+          <div className={styles.main_overlay}/>
           <div className={styles.overlay_text}>{main_texts[index]}</div>
           <div className={styles.scroll_bar_wrapper}>
             <div className={styles.scroll_item} style={{backgroundImage: `url(/scroll_item.svg)`}}/>
