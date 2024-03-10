@@ -19,8 +19,8 @@ const MicroPiles: React.FC  = () => {
                     <Link href='/helixPiles' className={styles.banner_menuItem2}>HELIX PILES 공법</Link>
                 </div>
             </div>
-
-            {/* 개념*/}
+        <div className={styles.contents_container}>
+                    {/* 개념*/}
             <div className={styles.concept_container}>
                 <div className={styles.concept_title}>MICRO PILES 공법</div>
                 <div className={styles.concept_background}>기존건물의 기초보강, 굴착장비의 진입이 불가능한 협소한 지역 시공시 연약지반, 사면의 보강 등에 적합한 파일 공법</div>
@@ -91,6 +91,8 @@ const MicroPiles: React.FC  = () => {
                 <div className={styles.explain_image} style={{backgroundImage : `url(/micro_explain_img1.svg)`}}></div>
                 </div>
             </div>
+        </div>
+            
 
         <Footer />
     </div>
