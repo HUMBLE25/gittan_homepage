@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect,useRef } from 'react';
 import styles from '@/src/styles/page.module.css';
-import Banner from '@/src/components/Banner';
+import Link from 'next/link';
 import '@/src/styles/globals.css'
 import Estimate from '@/src/components/Estimate';
 import Footer from '@/src/components/Footer';
@@ -75,10 +75,38 @@ const Home: React.FC = () => {
             ))}
           </div>
       </div>
+
       <div ref={nextSectionRef}>
-        <div className={styles.main_body_container}>
-              <div className={styles.main_body_text_container}></div>
+        <div className={styles.main_info_container}>
+              
+              <div className={styles.main_info_text_container}>
+                <div className={styles.main_info_title}>GITTANCOMPANY <span>INFO</span></div>
+                <div className={styles.main_info_text}>내진보강공사의 모든 것, 전문가를 직접 파견하여 해결해드립니다.</div>
+              </div>
+              <div className={styles.main_info_img_container}>
+                <Link href="/introduceCo" className={styles.main_info_item1}>
+                  <div className={styles.main_info_img} style={{backgroundImage : `url(/main_contents_img1.svg)`}}>
+                        <div className={styles.main_info_title}>인사말</div>
+                        <div className={styles.main_info_text}>기탄산업개발은 축척된 기술로 안전을 최우선하여 신뢰를 주는 전문시공업체입니다.</div>
+                  </div>
+                </Link>
+                <div className={styles.main_info_section}>
+                  <Link href="/microPiles" className={styles.main_info_item2}>
+                    <div className={styles.main_info_img} style={{backgroundImage : `url(/main_contents_img2.svg)`}}>
+                      <div className={styles.main_info_title}>사업소개 : MICRO PILES</div>
+                      <div className={styles.main_info_text}>MICRO PILES 공법으로 협소한 지역 시공까지 가능합니다.</div>
+                    </div>
+                  </Link>
+                  <Link href="/helixPiles" className={styles.main_info_item2}> 
+                    <div className={styles.main_info_img} style={{backgroundImage : `url(/main_contents_img3.svg)`}}>
+                      <div className={styles.main_info_title}>사업소개 : HELIX PILES</div>
+                      <div className={styles.main_info_text}>HELIX PILES 공법으로 무소음, 무진동 시공이 가능합니다.</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
         </div>
+
       <div className={styles.main_container}>
         <div className={styles.performance_text}>주요 시공 실적</div>
         <div className={styles.flex_container}>
