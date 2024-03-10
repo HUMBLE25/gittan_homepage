@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className={styles.footer_container}>
             <div className={styles.footer_text_wrapper}>
-                <div className={styles.footer_title_text}>기탄산업개발</div>
+                <div className={styles.footer_title_logo}></div>
                 <div className={styles.footer_content_container}>
                     <div className={styles.footer_content}> 
                         <div>상호명 : 기탄산업 개발 </div> 
