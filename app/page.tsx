@@ -82,7 +82,6 @@ const Home: React.FC = () => {
 
       <div ref={nextSectionRef}>
         <div className={styles.main_info_container}>
-              
               <div className={styles.main_info_text_container}>
                 <div className={styles.main_info_title}>GITTANCOMPANY <span>INFO</span></div>
                 <div className={styles.main_info_text}>내진보강공사의 모든 것, 전문가를 직접 파견하여 해결해드립니다.</div>

@@ -120,7 +120,7 @@
     word-wrap: break-word;
     transition: all 1.5s ease;
     /* border: 2px solid green; */
-    margin: 30px 0px 30px 0px;
+    margin: 80px 0px 30px 0px;
 
 }
 .main_info_title span{
@@ -305,7 +305,7 @@
         }
         .main_info_title{
             font-size: 14px;
-            margin: 10px 0px 10px 0px;
+            margin: 25px 0px 10px 0px;
         }
         .main_info_text{
             font-size: 10px;
@@ -320,7 +320,6 @@
         .main_info_img div:first-child{
             font-size: 14px;
         }
-        
         .main_info_img div:last-child{
             font-size: 10px;
         }
