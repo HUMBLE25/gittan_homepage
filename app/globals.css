@@ -28,9 +28,10 @@
 
 html, body {
   color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
   padding: 0;
   margin: 0;
-  background: #EEF1F2;
+  /* background: #EEF1F2; */
 }
 @layer utilities {
   .text-balance {

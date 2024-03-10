@@ -91,7 +91,7 @@ const Home: React.FC = () => {
                   <div className={styles.main_info_img} style={{backgroundImage : `url(/main_contents_img1.svg)`}}/>
                   <div className={styles.overlay}/>
                   <div className={styles.main_info_contents_title}>인사말</div>
-                  <div className={styles.main_info_contents_text}>기탄산업개발은 축척된 기술로 안전을 최우선하여 신뢰를 주는 전문시공업체입니다.</div>
+                  <div className={styles.main_info_contents_text}>기탄산업개발은 축척된 기술로 안전을 최우선하여<br></br> 신뢰를 주는 전문시공업체입니다.</div>
                 </Link>
                 <div className={styles.main_info_section}>
                   <Link href="/microPiles" className={styles.main_info_item2}>
