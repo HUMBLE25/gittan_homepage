@@ -24,8 +24,8 @@
 }
 
 .logo_image{
-    width: 150px; 
-    height: 45px;
+    width: 160px; 
+    height: 60px;
     background-image: url('/gittan_logo.svg');
     background-size: 100% 100%;
     background-position: center;
