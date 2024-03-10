@@ -31,7 +31,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % main_image.length);
-    }, 5000);
+    }, 2500);
     return () => {
       clearInterval(interval); 
     };
