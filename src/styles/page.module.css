@@ -286,6 +286,9 @@
 }
 
   @media (max-width: 480px) {
+        .overlay_text{
+            font-size: 18px;
+        }
         .performance_text{
             font-size: 12px;
             margin: 0;
@@ -299,6 +302,30 @@
         }
         .flex_container_sub {
             height: 70px;
+        }
+        .main_info_title{
+            font-size: 14px;
+            margin: 10px 0px 10px 0px;
+        }
+        .main_info_text{
+            font-size: 10px;
+            margin: 10px 0px 10px 0px;
+        }
+        .main_info_item1{
+            height: 200px;
+        }
+        .main_info_item2{
+            height: 100px;
+        }
+        .main_info_img div:first-child{
+            font-size: 14px;
+        }
+        
+        .main_info_img div:last-child{
+            font-size: 10px;
+        }
+        .main_info_section{
+            height: 200px;
         }
     }
 
@@ -318,6 +345,7 @@
     .flex_container_sub{
         height: 100px;
     }
+    
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
