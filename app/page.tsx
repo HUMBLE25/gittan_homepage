@@ -69,11 +69,15 @@ const Home: React.FC = () => {
           <div className={styles.main_image}  style={{backgroundImage:`url(${main_image[index]})`}}/>
           <div className={styles.overlay}/>
           <div className={styles.overlay_text}>{main_texts[index]}</div>
-          <div className={styles.side_bar_wrapper}>
-            {Array(4).fill(null).map((_, i) => (
-              <div key={i} className={styles.side_bar_item} style={{backgroundColor: i === index ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 20%)'}}/>
-            ))}
+          <div className={styles.scroll_bar_wrapper}>
+            <div className={styles.scroll_item} style={{backgroundImage: `url(/scroll_item.svg)`}}/>
+            <div className={styles.side_bar_wrapper}>
+              {Array(4).fill(null).map((_, i) => (
+                <div key={i} className={styles.side_bar_item} style={{backgroundColor: i === index ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 20%)'}}/>
+              ))}
+            </div>
           </div>
+      
       </div>
 
       <div ref={nextSectionRef}>
@@ -108,19 +112,42 @@ const Home: React.FC = () => {
         </div>
 
       <div className={styles.main_container}>
-        <div className={styles.performance_text}>주요 시공 실적</div>
-        <div className={styles.flex_container}>
-          <Item src={performance_img1}  text='강원OO초등학교' />
-          <Item src={performance_img2}  text='거제OO학교' />
-          <Item src={performance_img3}  text='꿈이랑도서관' />
-          <Item src={performance_img4}  text='대구OO도서관' />
+        <div className={styles.performance_text}>시공 <span>실적</span></div>
+        <div className={styles.item_container}>
+            <div className={styles.flex_container}>
+              <Link className={styles.item_link} href="https://blog.naver.com/gittan">
+                <Item src={performance_img1}  text='강원OO초등학교' />
+              </Link>
+              
+              <Link className={styles.item_link} href="https://blog.naver.com/gittan/223347597544"> 
+                <Item src={performance_img2}  text='거제OO학교' />
+              </Link>
+              
+              <Link className={styles.item_link} href="https://blog.naver.com/gittan/223353406695">
+                <Item src={performance_img3}  text='꿈이랑도서관' />
+              </Link>
+              
+              <Link className={styles.item_link} href="https://blog.naver.com/gittan">  
+                <Item src={performance_img4}  text='대구OO도서관' />
+              </Link>
+              
+            </div>
+            <div className={styles.flex_container_sub}>
+            <Link className={styles.item_link} href="https://blog.naver.com/gittan">  
+              <Item src={performance_img5}  text='성남 OO중학교' />
+            </Link>
+            <Link className={styles.item_link} href="https://blog.naver.com/gittan">  
+              <Item src={performance_img6}  text='화성 OO중학교' />
+            </Link>
+            <Link className={styles.item_link} href="https://blog.naver.com/gittan">  
+              <Item src={performance_img7}  text='철원 OO고등학교' />
+            </Link>
+            <Link className={styles.item_link} href="https://blog.naver.com/gittan/223264843125">  
+              <Item src={performance_img8}  text='홍천 OO중학교' />
+            </Link>
+            </div>
         </div>
-        <div className={styles.flex_container_sub}>
-          <Item src={performance_img5}  text='성남 OO중학교' />
-          <Item src={performance_img6}  text='화성 OO중학교' />
-          <Item src={performance_img7}  text='철원 OO고등학교' />
-          <Item src={performance_img8}  text='홍천 OO중학교' />
-        </div>
+       
       </div>
       </div>
 
