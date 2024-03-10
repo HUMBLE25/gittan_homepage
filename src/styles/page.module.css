@@ -29,7 +29,7 @@
     position: absolute;
     background-size: cover;
     background-position: center;
-    transition: all 1s ease;
+    transition: all 1.5s ease;
 }
 
 .overlay {
@@ -38,7 +38,7 @@
     top :0px;
     position: absolute;
     background: rgba(0, 0, 0, 0.60);
-    transition: all 1s ease;
+    transition: all 1.5s ease;
 }
 
 .overlay_text{
@@ -120,7 +120,7 @@
     transition: all 1.5s ease;
     height: 100px;
     /* border: 2px solid green; */
-    margin: 80px 0px 30px 0px;
+    margin: 80px 0px -40px 0px;
 }
 .main_info_title span{
     color: #1A4CFD;
@@ -202,7 +202,7 @@
     color: white;
     position: absolute;
     top: 55%;
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Nanum Gothic';
     font-weight: 600;
     word-wrap: break-word;
@@ -215,7 +215,7 @@
     color: white;
     position: absolute;
     top: 70%;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Nanum Gothic';
     font-weight: 400;
     word-wrap: break-word;
@@ -228,7 +228,7 @@
     color: white;
     position: absolute;
     top: 40%;
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Nanum Gothic';
     font-weight: 600;
     word-wrap: break-word;
@@ -241,7 +241,7 @@
     color: white;
     position: absolute;
     top: 70%;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Nanum Gothic';
     font-weight: 400;
     word-wrap: break-word;
@@ -251,7 +251,8 @@
 }
 
 .main_info_item1:hover .main_info_img,
-.main_info_item2:hover .main_info_img {
+.main_info_item2:hover .main_info_img,
+.overlay:hover {
     transform: scale(1.03);
 }
 
