@@ -25,12 +25,13 @@
 }
 
 .footer_title_logo {
-    width: 200px;
-    height: 50px;
+    width: 220px;
+    height: 80px;
     transition: all 1s ease; 
     background-image: url('/gittan_logo_gray.svg');
     background-position: center;
     background-size: 100% 100%;
+    margin: 10px 0px 20px 0px;
     /* border: 1px solid red; */
 }
 
@@ -41,7 +42,7 @@
     display: flex;
 }
 .footer_content div{
-    color: white;
+    color: #777777;
     font-size: 20px;
     font-family: 'Nanum Gothic';
     font-weight: 400;
@@ -52,7 +53,7 @@
 
 @media (max-width: 480px) {
     .footer_container {
-        height: 75px;
+        height: 100px;
     }
     .footer_title_logo{
         width: 100px;

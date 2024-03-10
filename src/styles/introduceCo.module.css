@@ -85,9 +85,6 @@
     align-items: center;
 }
 
-
-
-
 .greeting_wrapper{
     display: flex;
     flex-direction: column;
@@ -150,6 +147,7 @@
     word-wrap: break-word;
     text-align: center;
     transition: all 1s ease;
+    line-height: 1.7;
 }
 
 .sub_img{
