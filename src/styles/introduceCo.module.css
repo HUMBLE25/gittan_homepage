@@ -170,6 +170,7 @@
     word-wrap: break-word;
     transition: all 1s ease;
     padding: 40px 30px 40px 30px;
+    /* border: 2px solid #274FC1; */
 }
 
 @media (max-width: 480px) {
@@ -199,17 +200,11 @@
         height: 20px;
         font-size: 10px;
     }
-
-    .small_image1 {
-        width: 150px;
-        height: 100px;
+    .sub_img{
+        width: 300px;
+        height: 200px;
     }
-
-    .small_image2 {
-        width: 150px;
-        height: 100px;
-    }
-
+  
     .large_image {
         width: 310px;
         height: 180px;
@@ -233,7 +228,9 @@
     }
 
     .signature {
-        font-size: 12px;
+        width: 200px;
+        height: 300px;
+        font-size: 11px;
     }
   }
 
