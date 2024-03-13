@@ -10,21 +10,32 @@ const Admin: React.FC = () => {
     const fileInput = useRef<HTMLInputElement>(null);
   
     const handleSubmit = async (event: React.FormEvent) => {
-      event.preventDefault();
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('author', author);
-      formData.append('content', content);
-      if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
-        formData.append('file', fileInput.current.files[0]);
-      }
-      const response = await fetch('/api/gallery', {
-        method: 'POST',
-        body: formData,
-      });
-  
-      const data = await response.json();
-      console.log(data);
+        event.preventDefault();
+        if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
+            const file = fileInput.current.files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = async () => {
+                const base64data = reader.result;
+                const response = await fetch('/api/gallery', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title: title,
+                        author: author,
+                        content: content,
+                        file: base64data
+                    }),
+                });
+
+                const data = await response.json();
+                console.log(data);
+            };
+        }else{
+            alert("파일을 선택해주세요.")
+        }
     };
 
     return (
