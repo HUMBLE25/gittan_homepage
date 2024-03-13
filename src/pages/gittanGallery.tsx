@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/src/styles/bin.module.css';
+import styles from '@/src/styles/gittanGallery.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -16,10 +16,12 @@ const GittanGallery: React.FC = () => {
             </div>
             {/* 바디 */}
             <div className={styles.body}>
-                <div className={styles.form_wrapper}>
-                    <div className={styles.form_index}>Home{`>`}기탄갤러리</div>
-                    <div className={styles.form_title}>기탄갤러리</div>
-                  
+                <div className={styles.board_wrapper}>
+                    <div className={styles.board_header}>
+                        <div className={styles.board_title}>PhotoGallery</div>
+                        <div className={styles.board_index}>Home{`<`}PhotoGallery</div>
+                    </div>
+                    
                 </div>
             </div>
             <Footer />
