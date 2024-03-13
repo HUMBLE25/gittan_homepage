@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styles from '@/src/styles/bin.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Admin: React.FC = () => {
+    const [title, setTitle] = useState('');
+    const [author, setAuthor] = useState('권규빈');
+    const [content, setContent] = useState('');
+    const fileInput = useRef<HTMLInputElement>(null);
+  
+    const handleSubmit = async (event: React.FormEvent) => {
+      event.preventDefault();
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('author', author);
+      formData.append('content', content);
+      if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
+        formData.append('file', fileInput.current.files[0]);
+      }
+      const response = await fetch('/api/gallery', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const data = await response.json();
+      console.log(data);
+    };
 
     return (
         <div className={styles.wrapper}>
@@ -20,10 +42,15 @@ const Admin: React.FC = () => {
                 <div className={styles.form_wrapper}>
                     <div className={styles.form_index}>Home{`>`}기탄갤러리</div>
                     <div className={styles.form_title}>기탄갤러리</div>
-                    <form className={styles.form_container}>
+                    <form className={styles.form_container} onSubmit={handleSubmit}>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}><p>*</p>제목</div>
-                            <input className={styles.form_input} type="text" placeholder="갤러리 제목을 입력하세요."/>
+                            <input className={styles.form_input} 
+                            type="text" 
+                            placeholder="갤러리 제목을 입력하세요." 
+                            value={title} 
+                            onChange={(e) => setTitle(e.target.value)}
+                            />
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}><p>*</p>작성자</div>
@@ -31,14 +58,18 @@ const Admin: React.FC = () => {
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}><p>*</p>내용</div>
-                            <textarea className={styles.form_textarea} placeholder="갤러리 설명을 입력하세요."/>
+                            <textarea className={styles.form_textarea} 
+                            placeholder="갤러리 설명을 입력하세요."
+                            value={content} 
+                            onChange={(e) => setContent(e.target.value)}
+                            />
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}>파일</div>
-                            <input className={styles.form_input} type="file"/>
+                            <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
                         </div>
                         <div className={styles.form_submit_item}>
-                            <button className={styles.form_submit}>등록</button>
+                            <button className={styles.form_submit} type="submit">등록</button>
                             <button className={styles.form_cancel}>취소</button>
                         </div>
                     </form>
