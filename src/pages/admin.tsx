@@ -8,15 +8,44 @@ const Admin: React.FC = () => {
     const [author, setAuthor] = useState('권규빈');
     const [content, setContent] = useState('');
     const fileInput = useRef<HTMLInputElement>(null);
-  
+    
+    const resizeImage = (file: File, maxWidth: number, maxHeight: number): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const img = document.createElement('img');
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                let width = img.width;
+                let height = img.height;
+
+                if (width > height) {
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                } else {
+                    if (height > maxHeight) {
+                        width *= maxHeight / height;
+                        height = maxHeight;
+                    }
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx?.drawImage(img, 0, 0, width, height);
+                resolve(canvas.toDataURL());
+            };
+            img.onerror = reject;
+            img.src = URL.createObjectURL(file);
+        });
+    };
+
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
             const file = fileInput.current.files[0];
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onloadend = async () => {
-                const base64data = reader.result;
+            const resizedImage = await resizeImage(file, 800, 800); // Adjust the maxWidth and maxHeight as needed
+            try {
                 const response = await fetch('/api/gallery', {
                     method: 'POST',
                     headers: {
@@ -26,14 +55,20 @@ const Admin: React.FC = () => {
                         title: title,
                         author: author,
                         content: content,
-                        file: base64data
+                        file: resizedImage
                     }),
                 });
 
+                if (!response.ok) {
+                    throw new Error(`Server responded with status code ${response.status}`);
+                }
+
                 const data = await response.json();
                 console.log(data);
-            };
-        }else{
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+        } else {
             alert("파일을 선택해주세요.")
         }
     };
