@@ -1,0 +1,210 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #EEF1F2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid violet; */
+}
+
+.banner {
+    width: 100%;
+    height: 520px;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    /* border: 2px solid red; */
+}
+
+.banner_img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+}
+
+.banner_overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.40);
+    transition: all 1s ease;
+}
+
+.banner_title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 56px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    word-wrap: break-word;
+    transition: all 1s ease;
+    /* border: 2px solid beige; */
+    margin-bottom: 50px;
+}
+
+.banner_contents {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-family: Nanum Gothic;
+    font-weight: 700;
+    word-wrap: break-word;
+    transition: all 1s ease;
+    line-height: 1.7;
+}
+
+.body{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #EEF1F2;
+    border: 2px solid blue;
+}
+
+.form_wrapper {
+    width: 50%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    /* border: 2px solid green; */
+    padding: 0% 10% 0% 10%;
+}
+
+.form_index{
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* border: 2px solid red; */
+}
+
+.form_title {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    /* border: 2px solid blue; */
+    background-image: linear-gradient(to right,black, black);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 0px 0px 10px 0px;
+    background-size: 100% 1px;
+    margin-bottom: 20px;
+}
+
+.form_container{
+    width: 100%;
+    /* height: 80%; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 2px solid red; */
+}
+
+.form_item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-top: 1px dotted gray;
+}
+
+.form_item_title{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEF1F2;
+    font-size: 14px;
+    font-weight: 600;
+    /* border: 2px solid blue; */
+}
+
+.form_item_title p {
+    color: red;
+}
+
+.form_input{
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin: 2% 5% 2% 5%;
+    /* border: 2px solid red; */
+}
+
+.form_textarea{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 2% 5% 2% 5%;
+    /* border: 2px solid yellow; */
+}
+
+.form_submit_item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top: 1px dotted gray;
+    justify-content: right;
+    
+}
+
+.form_submit{
+    height: 20px;
+    position: relative;
+    margin: 5% 0% 5% 0%;
+    border: none;
+    color: white;
+    background-color: #4641D9;
+    /* border: 2px solid red; */
+}
+
+.form_cancel{
+    height: 20px;
+    position: relative;
+    margin: 5% 5% 5% 0%;
+    border: none;
+    color: white;
+    background-color: #4641D9;
+    /* border: 2px solid red; */
+}
