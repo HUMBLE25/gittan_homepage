@@ -14,14 +14,11 @@ const GittanGallery: React.FC = () => {
                 url: '/api/gallery',
             
             });
-            console.log("data : ", result.data[0]==null);
             if(!result.data[0]){
-                console.log("data is null")
                 setData(false);
             }else{
                 setData(result.data);
             }
-            
         };
 
         fetchData();
@@ -61,13 +58,15 @@ const GittanGallery: React.FC = () => {
                     // 데이터가 없을 때 표시할 메시지
                     <div className={styles.board_no_data}>게시글이 없습니다.</div>
                 )}
-
+ 
                 </div>
                 {/* 보드푸터 */}
                     <div className={styles.board_footer}>
-
+                        <div className={styles.board_footer_line}/>
+                        <div className={styles.board_page_button}>
+                            1
+                        </div>
                     </div>
-
                 </div>
                
             </div>
