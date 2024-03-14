@@ -20,7 +20,7 @@
     text-decoration: none;
     padding: 0.5%;
     gap:1%;
-    /* border: 2px solid green; */
+    border: 2px solid green;
 }
 
 .logo_image{
@@ -100,7 +100,7 @@
         height: 10px;
     }
     .logo_wrapper{
-        width: 40%;
+        width: 25%;
     }
     .logo_image{
         width: 80px; 

@@ -18,11 +18,19 @@ const GittanGallery: React.FC = () => {
             <div className={styles.body}>
                 <div className={styles.board_wrapper}>
                     <div className={styles.board_header}>
-                        <div className={styles.board_title}>PhotoGallery</div>
+                        <div className={styles.board_title_wrapper}>
+                            <div className={styles.board_box}></div>
+                            <div className={styles.board_title}>PhotoGallery</div>    
+                        </div>
                         <div className={styles.board_index}>Home{`<`}PhotoGallery</div>
+                    </div>  
+
+                {/* 보드푸터 */}
+                    <div className={styles.board_footer}>
+                        
                     </div>
-                    
                 </div>
+               
             </div>
             <Footer />
         </div>
