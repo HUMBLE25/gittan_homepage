@@ -14,7 +14,7 @@ const GittanGallery: React.FC = () => {
                 url: '/api/gallery',
             
             });
-            console.log("data : ", result.data[0]);
+            // console.log("data : ", result.data==null);
             setData(result.data);
         };
 
