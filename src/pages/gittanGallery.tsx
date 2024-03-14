@@ -43,7 +43,7 @@ const GittanGallery: React.FC = () => {
                     </div>  
                 {/* 보드 바디 */}
                 <div className={styles.board_body}>
-                {data[0] ? (
+                {data ? (
                     // 데이터가 있을 때 표시할 내용
                     <div>data available</div>
                     // data.map(item => (
