@@ -67,6 +67,7 @@ const GittanGallery: React.FC = () => {
                             1
                         </div>
                     </div>
+
                 </div>
                
             </div>
