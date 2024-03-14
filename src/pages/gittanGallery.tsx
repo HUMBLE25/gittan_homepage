@@ -14,8 +14,14 @@ const GittanGallery: React.FC = () => {
                 url: '/api/gallery',
             
             });
-            // console.log("data : ", result.data==null);
-            setData(result.data);
+            console.log("data : ", result.data[0]==null);
+            if(!result.data[0]){
+                console.log("data is null")
+                setData(false);
+            }else{
+                setData(result.data);
+            }
+            
         };
 
         fetchData();
