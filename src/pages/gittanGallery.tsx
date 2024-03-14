@@ -3,9 +3,20 @@ import axios from 'axios';
 import styles from '@/src/styles/gittanGallery.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
+
+interface GalleryItem {
+    id: number;
+    title: string;
+    content: string;
+    name: string;
+    imageUrl: string;
+    creationTime: string;
+    
+}
 
 const GittanGallery: React.FC = () => {
-    const [data, setData] = useState(null);
+    const [data, setData] =  useState<GalleryItem[] | null | false>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,16 +25,19 @@ const GittanGallery: React.FC = () => {
                 url: '/api/gallery',
             
             });
-            if(!result.data[0]){
-                setData(false);
+            console.log(result.data.data)
+            if(result.data.data[0]){
+                console.log("true")
+                setData(result.data.data);
             }else{
-                setData(result.data);
+                console.log("false")
+                setData(false);
             }
         };
 
         fetchData();
     }, []);
-
+   
     return (
         <div className={styles.wrapper}>
             <Header />
@@ -48,12 +62,23 @@ const GittanGallery: React.FC = () => {
                 <div className={styles.board_body}>
                 {data ? (
                     // 데이터가 있을 때 표시할 내용
-                    <div>data available</div>
-                    // data.map(item => (
-                    //     <div key={item.id}>
-                    //         {/* 데이터를 화면에 표시하는 코드 */}
-                    //     </div>
-                    // ))
+                    <div className={styles.gallery}>
+                        {data.map((item: GalleryItem, index) => (
+                            
+                            <div key={index} className={styles.gallery_item}>
+                            <Image 
+                                src={item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)}
+                                alt={item.title}
+                                width={500} 
+                                height={300}
+                                className={styles.gallery_image}
+                            />
+                            <div className={styles.gallery_title}>{item.title}</div>
+                            <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
+                        </div>
+                        ))}
+                    </div>
+                  
                 ) : (
                     // 데이터가 없을 때 표시할 메시지
                     <div className={styles.board_no_data}>게시글이 없습니다.</div>

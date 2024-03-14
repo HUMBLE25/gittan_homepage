@@ -65,8 +65,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         } else {
             // GET 요청 처리
             const [rows, fields] = await connection.execute(
-                "SELECT * FROM gallery ORDER BY creationTime DESC"
+                "SELECT * FROM gallery ORDER BY creationTime DESC LIMIT 9 OFFSET 0"
             );
+            console.log(rows);
             res.status(200).json({ data: rows });
         }
     } catch (error) {
