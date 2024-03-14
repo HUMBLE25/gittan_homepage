@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import styles from '@/src/styles/gittanGallery.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const GittanGallery: React.FC = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios({
+                method: 'get',
+                url: '/api/gallery',
+            
+            });
+            console.log("data : ", result.data[0]);
+            setData(result.data);
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <div className={styles.wrapper}>
             <Header />
@@ -24,11 +41,27 @@ const GittanGallery: React.FC = () => {
                         </div>
                         <div className={styles.board_index}>Home{`<`}PhotoGallery</div>
                     </div>  
+                {/* 보드 바디 */}
+                <div className={styles.board_body}>
+                {data[0] ? (
+                    // 데이터가 있을 때 표시할 내용
+                    <div>data available</div>
+                    // data.map(item => (
+                    //     <div key={item.id}>
+                    //         {/* 데이터를 화면에 표시하는 코드 */}
+                    //     </div>
+                    // ))
+                ) : (
+                    // 데이터가 없을 때 표시할 메시지
+                    <div className={styles.board_no_data}>게시글이 없습니다.</div>
+                )}
 
+                </div>
                 {/* 보드푸터 */}
                     <div className={styles.board_footer}>
-                        
+
                     </div>
+
                 </div>
                
             </div>

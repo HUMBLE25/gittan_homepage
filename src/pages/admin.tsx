@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const Admin: React.FC = () => {
     const [title, setTitle] = useState('');
-    const [author, setAuthor] = useState('권규빈');
+    const [author, setAuthor] = useState('기탄산업개발');
     const [content, setContent] = useState('');
     const fileInput = useRef<HTMLInputElement>(null);
     
@@ -100,7 +100,7 @@ const Admin: React.FC = () => {
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}><p>*</p>작성자</div>
-                            <div className={styles.form_input}>권규빈</div>
+                            <div className={styles.form_input}>기탄산업개발</div>
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}><p>*</p>내용</div>

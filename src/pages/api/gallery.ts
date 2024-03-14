@@ -79,6 +79,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const [rows, fields] = await connection.execute(
                 "SELECT * FROM gallery ORDER BY creationTime DESC"
             );
+            console.log(rows)
             res.status(200).json({ data: rows });
         }
     } catch (error) {
