@@ -27,10 +27,12 @@ const GittanGallery: React.FC = () => {
             });
             console.log(result.data.data)
             if(result.data.data[0]){
-                setData(result.data.data);
+                // setData(result.data.data);
+                setData(false);
 
             }else{
-                setData(false);
+                // setData(false);
+                setData(result.data.data);
             }
         };
 
