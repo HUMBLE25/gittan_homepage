@@ -27,14 +27,10 @@ const GittanGallery: React.FC = () => {
             });
             console.log(result.data.data)
             if(result.data.data[0]){
-                // console.log("true")
-                setData(false);
-                // setData(result.data.data);
+                setData(result.data.data);
 
             }else{
-                // console.log("false")
-                // setData(false);
-                setData(result.data.data);
+                setData(false);
             }
         };
 
@@ -69,12 +65,8 @@ const GittanGallery: React.FC = () => {
                         {data.map((item: GalleryItem, index) => (
                             
                             <div key={index} className={styles.gallery_item}>
-                            <Image 
-                                src={item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)}
-                                alt={item.title}
-                                width={500} 
-                                height={300}
-                                className={styles.gallery_image}
+                           <div style={{backgroundImage: `url(${item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)})`,}}
+                            className={styles.gallery_image}
                             />
                             <div className={styles.gallery_title}>{item.title}</div>
                             <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
