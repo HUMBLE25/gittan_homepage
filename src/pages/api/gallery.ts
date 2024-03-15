@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import mysql from 'mysql2/promise';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
@@ -70,8 +70,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             console.log(rows);
             res.status(200).json({ data: rows });
         }
-    } catch (error) {
+    }  catch (error ) {
         console.error('An error occurred:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).json({ message: 'Internal Server Error', error: error });
     }
 }
