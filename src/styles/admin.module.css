@@ -208,3 +208,18 @@
     background-color: #4641D9;
     /* border: 2px solid red; */
 }
+
+
+@media (max-width: 480px) {
+    .banner{
+        height: 220px;
+    }
+
+    .banner_title{
+        font-size: 18px;
+    }
+
+    .banner_contents{
+        font-size: 10px;
+    }
+  }
