@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import mysql from 'mysql2/promise';
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
