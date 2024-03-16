@@ -273,6 +273,7 @@
 
     .banner_title{
         font-size: 18px;
+        margin-bottom: 35px;
     }
 
     .banner_contents{
@@ -288,6 +289,9 @@
     }
 
     .board_no_data{
+        font-size: 10px;
+    }
+    .board_page_button{
         font-size: 10px;
     }
   }
