@@ -13,7 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME
         });
-        await connection.ping();
+        const ping = await connection.ping();
+        // console.log(ping);
         if (req.method === 'POST') {
             // POST 요청 처리
             if (!req.body) {
