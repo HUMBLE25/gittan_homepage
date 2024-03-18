@@ -1,10 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import { Request, Response } from 'express';
+import multer from 'multer';
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
+dotenv.config();
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const upload = multer({ dest: 'uploads/' });
+
+export default async function handler(req: Request, res: Response) {
     try {
         const connection = await mysql.createConnection({
             host: process.env.DB_HOST,
@@ -13,66 +16,49 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME
         });
+
         const ping = await connection.ping();
-        // console.log(ping);
+
         if (req.method === 'POST') {
             // POST 요청 처리
-            if (!req.body) {
-                throw new Error('Request body is missing');
-            }
+            console.log('POST 요청 처리')
+            //아래에서 에러 발생중
+            upload.single('file')(req, res, async (err: any) => {
+                if (err) {
+                    console.error('Error uploading file:', err);
+                    return res.status(500).json({ message: 'Error uploading file', error: err });
+                }
 
-            const { title, author, content, file } = req.body;
-            
-            const matches = file.match(/^data:([A-Za-z-+/]+);base64,(.+)/);
-            if (!matches) {
-                throw new Error('File is not in Base64 format');
-            }
+                const { title, author, content } = req.body;
+                const file = req.file; // Uploaded file
 
-            const mimeType = matches[1];
-            const base64Data = matches[2];
+                // Handle file and form data here
+                console.log('File:', file);
+                console.log('Title:', title);
+                console.log('Author:', author);
+                console.log('Content:', content);
 
-            let extension;
-            if (mimeType === 'image/jpeg') {
-                extension = '.jpg';
-            } else if (mimeType === 'image/png') {
-                extension = '.png';
-            } else {
-                throw new Error(`Unsupported MIME type: ${mimeType}`);
-            }
+                // Process data and file as needed
 
-            const date = new Date();
-            const timestamp = date.toISOString().replace(/[-:.]/g, '');
+                return res.status(200).json({ message: 'File uploaded successfully' });
+            });
+            // const date = new Date();
+            // const timestamp = date.toISOString().replace(/[-:.]/g, '');
 
-            const dirPath = path.join(process.cwd(), 'public', 'img');
-            if (!fs.existsSync(dirPath)) {
-                fs.mkdirSync(dirPath, { recursive: true });
-            }
-
-            const imagePath = path.join(dirPath, `${title}-${timestamp}${extension}`);
-            fs.writeFileSync(imagePath, base64Data, 'base64');
-
-            if (fs.existsSync(imagePath)) {
-                res.status(200).json({ message: '성공적으로 등록되었습니다.' });
-                const [rows, fields] = await connection.execute(
-                    "INSERT INTO gallery (title, content, name, imageUrl) VALUES (?, ?, ?, ?)",
-                    [title, content, author, imagePath]
-                );
-            } else {
-                res.status(500).json({ message: 'Save failure' });
-            }
-            console.log(title, author, content,imagePath); 
-            
-            
+            // const [rows, fields] = await connection.execute(
+            //     "INSERT INTO gallery (title, content, name, imageUrl) VALUES (?, ?, ?, ?)",
+            //     [title, content, author, imagePath]
+            // );
         } else {
             // GET 요청 처리
             const [rows, fields] = await connection.execute(
                 "SELECT * FROM gallery ORDER BY creationTime DESC LIMIT 9 OFFSET 0"
             );
             console.log(rows);
-            res.status(200).json({ data: rows });
+            // return NextResponse.json({ data: rows });
         }
     }  catch (error ) {
         console.error('An error occurred:', error);
-        res.status(500).json({ message: 'Internal Server Error', error: error });
+        // return NextResponse.json({ message: 'Internal Server Error', error: error });
     }
 }

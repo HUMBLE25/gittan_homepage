@@ -23,15 +23,12 @@ const GittanGallery: React.FC = () => {
             const result = await axios({
                 method: 'get',
                 url: '/api/gallery',
-            
             });
             console.log(result.data.data)
             if(result.data.data[0]){
-                // setData(result.data.data);
                 setData(false);
 
             }else{
-                // setData(false);
                 setData(result.data.data);
             }
         };
@@ -67,7 +64,7 @@ const GittanGallery: React.FC = () => {
                         {data.map((item: GalleryItem, index) => (
                             
                             <div key={index} className={styles.gallery_item}>
-                           <div style={{backgroundImage: `url(${item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)})`,}}
+                            <div style={{backgroundImage: `url(${item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)})`,}}
                             className={styles.gallery_image}
                             />
                             <div className={styles.gallery_title}>{item.title}</div>

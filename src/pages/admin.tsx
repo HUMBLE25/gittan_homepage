@@ -8,61 +8,27 @@ const Admin: React.FC = () => {
     const [author, setAuthor] = useState('기탄산업개발');
     const [content, setContent] = useState('');
     const fileInput = useRef<HTMLInputElement>(null);
-    
-    const resizeImage = (file: File, maxWidth: number, maxHeight: number): Promise<string> => {
-        return new Promise((resolve, reject) => {
-            const img = document.createElement('img');
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                let width = img.width;
-                let height = img.height;
-
-                if (width > height) {
-                    if (width > maxWidth) {
-                        height *= maxWidth / width;
-                        width = maxWidth;
-                    }
-                } else {
-                    if (height > maxHeight) {
-                        width *= maxHeight / height;
-                        height = maxHeight;
-                    }
-                }
-
-                canvas.width = width;
-                canvas.height = height;
-                const ctx = canvas.getContext('2d');
-                ctx?.drawImage(img, 0, 0, width, height);
-                resolve(canvas.toDataURL());
-            };
-            img.onerror = reject;
-            img.src = URL.createObjectURL(file);
-        });
-    };
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
             const file = fileInput.current.files[0];
-            const resizedImage = await resizeImage(file, 800, 800); // Adjust the maxWidth and maxHeight as needed
+            const formData = new FormData();
+            console.log('First Form data:', formData);
+            formData.append('title', title);
+            formData.append('author', author);
+            formData.append('content', content);
+            formData.append('file', file);
+            console.log('End fo Form data:', formData);
             try {
                 const response = await fetch('/api/gallery', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        title: title,
-                        author: author,
-                        content: content,
-                        file: resizedImage
-                    }),
+                    body: formData,
                 });
 
                 if (!response.ok) {
                     throw new Error(`Server responded with status code ${response.status}`);
                 }
-
                 const data = await response.json();
                 alert(data.message)
                 location.reload();
