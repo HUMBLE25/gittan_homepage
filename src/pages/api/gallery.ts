@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// import { NextApiRequest, NextApiResponse } from 'next';
 import { Request, Response } from 'express';
 import multer from 'multer';
 import mysql from 'mysql2/promise';
@@ -22,6 +22,7 @@ export default async function handler(req: Request, res: Response) {
         if (req.method === 'POST') {
             // POST 요청 처리
             console.log('POST 요청 처리')
+            console.log(req.body)
             //아래에서 에러 발생중
             upload.single('file')(req, res, async (err: any) => {
                 if (err) {

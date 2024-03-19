@@ -14,12 +14,21 @@ const Admin: React.FC = () => {
         if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
             const file = fileInput.current.files[0];
             const formData = new FormData();
+            // formData에 데이터가 들어 가는지 파악한다.
+
+            // 데이터가 제대로 오는 지도 파악한다.
             console.log('First Form data:', formData);
             formData.append('title', title);
             formData.append('author', author);
             formData.append('content', content);
             formData.append('file', file);
-            console.log('End fo Form data:', formData);
+            console.log('End fo Form data:', formData.entries());
+            // formData.has()로보면 모두 True가 나온다. 그럼 모두 있다는 거 아닌가?
+            // 뭐가 문제인거지?
+            // API resolved without sending a response for /api/gallery, this may result in stalled requests.
+            // Error uploading file: Error: Unexpected end of form
+            // 예상치 못한 form의 종료?? 무슨 뜻이지? 시간의 문제인가? 동기화의 문제 일까?
+
             try {
                 const response = await fetch('/api/gallery', {
                     method: 'POST',
