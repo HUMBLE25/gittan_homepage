@@ -32,7 +32,7 @@ const Admin: React.FC = () => {
                 console.log(file)
                 const data = await response.json();
                 alert(data.message)
-                location.reload();
+                // location.reload();
             } catch (error) {
                 console.error('An error occurred:', error);
             }
