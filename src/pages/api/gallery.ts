@@ -16,7 +16,7 @@ export const config = {
 
   const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-      cb(null, '/../../../public'); // 이미지를 저장할 폴더
+      cb(null, path.join(process.cwd(), 'public')); // 이미지를 저장할 폴더
     },
     filename: function(req, file, cb) {
       // 파일 이름 설정 및 확장자 추가
@@ -43,7 +43,6 @@ export default async function handler(req: Request, res: Response) {
             console.log('POST 요청 처리')
             upload.single('file')(req, res, async (err: any) => {
                 if (err) {
-                    console.log(req.body);
                     console.log(req.file);
                     console.error('Error uploading file:', err);
                     return res.status(500).json({ message: 'Error uploading file', error: err });
