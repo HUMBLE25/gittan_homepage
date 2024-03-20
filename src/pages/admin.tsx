@@ -8,6 +8,8 @@ const Admin: React.FC = () => {
     const [author, setAuthor] = useState('기탄산업개발');
     const [content, setContent] = useState('');
     const fileInput = useRef<HTMLInputElement>(null);
+    const [btnColor, setBtnColor] = useState("black");
+    const [btnClicked, setBtnClicked] = useState(false);
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
@@ -36,6 +38,7 @@ const Admin: React.FC = () => {
                 console.error('An error occurred:', error);
             }
         } else {
+            location.reload();
             alert("파일을 선택해주세요.")
         }
     };
@@ -82,8 +85,8 @@ const Admin: React.FC = () => {
                             <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
                         </div>
                         <div className={styles.form_submit_item}>
-                            <button className={styles.form_submit} type="submit">등록</button>
-                            <button className={styles.form_cancel}>취소</button>
+                            <button className={styles.form_submit} type="submit" >등록</button>
+                            <button className={styles.form_cancel} >취소</button>
                         </div>
                     </form>
                 </div>

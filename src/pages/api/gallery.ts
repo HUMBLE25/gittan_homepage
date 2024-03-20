@@ -54,7 +54,7 @@ export default async function handler(req: Request, res: Response) {
                     [title, content, author, file.path]
                 );
                 // Process data and file as needed
-                return res.status(200).json({ message: 'File uploaded successfully' });
+                return res.status(200).json({ message: '등록에 성공하였습니다!' });
             });
         } else {
             //GET
