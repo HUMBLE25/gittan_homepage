@@ -29,7 +29,7 @@ const Admin: React.FC = () => {
                 if (!response.ok) {
                     throw new Error(`Server responded with status code ${response.status}`);
                 }
-                
+                console.log(file)
                 const data = await response.json();
                 alert(data.message)
                 location.reload();

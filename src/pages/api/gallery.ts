@@ -4,6 +4,7 @@ import multer from 'multer';
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 import path from 'path';
+import {promises as fs} from 'fs';
 
 dotenv.config();
 
@@ -42,6 +43,8 @@ export default async function handler(req: Request, res: Response) {
             console.log('POST 요청 처리')
             upload.single('file')(req, res, async (err: any) => {
                 if (err) {
+                    console.log(req.body);
+                    console.log(req.file);
                     console.error('Error uploading file:', err);
                     return res.status(500).json({ message: 'Error uploading file', error: err });
                 }
