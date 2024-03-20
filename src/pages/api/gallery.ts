@@ -5,6 +5,12 @@ import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 dotenv.config();
 
+export const config = {
+    api: {
+      bodyParser: false
+    }
+  }
+
 const upload = multer({ dest: 'uploads/' });
 
 export default async function handler(req: Request, res: Response) {
@@ -22,7 +28,7 @@ export default async function handler(req: Request, res: Response) {
         if (req.method === 'POST') {
             // POST 요청 처리
             console.log('POST 요청 처리')
-            console.log(req.body)
+            
             //아래에서 에러 발생중
             upload.single('file')(req, res, async (err: any) => {
                 if (err) {
@@ -40,7 +46,6 @@ export default async function handler(req: Request, res: Response) {
                 console.log('Content:', content);
 
                 // Process data and file as needed
-
                 return res.status(200).json({ message: 'File uploaded successfully' });
             });
             // const date = new Date();
