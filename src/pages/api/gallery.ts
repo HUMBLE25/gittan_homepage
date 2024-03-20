@@ -24,7 +24,7 @@ export const config = {
   });
 
 const upload = multer({ storage: storage });
-
+//
 export default async function handler(req: Request, res: Response) {
     try {
         const connection = await mysql.createConnection({
