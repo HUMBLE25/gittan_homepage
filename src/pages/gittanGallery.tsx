@@ -68,6 +68,9 @@ const GittanGallery: React.FC = () => {
                             <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
                         </div>
                         ))}
+                         {Array.from({ length: 9 - data.length }).map((_, index) => (
+                         <div key={`empty-${index}`} className={styles.gallery_item}></div>
+                         ))}
                     </div>
                   
                 ) : (
