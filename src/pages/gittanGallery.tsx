@@ -3,7 +3,6 @@ import axios from 'axios';
 import styles from '@/src/styles/gittanGallery.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Image from 'next/image';
 
 interface GalleryItem {
     id: number;
@@ -26,10 +25,9 @@ const GittanGallery: React.FC = () => {
             });
             console.log(result.data.data)
             if(result.data.data[0]){
-                setData(false);
-
-            }else{
                 setData(result.data.data);
+            }else{
+                setData(false);
             }
         };
 
@@ -62,9 +60,8 @@ const GittanGallery: React.FC = () => {
                     // 데이터가 있을 때 표시할 내용
                     <div className={styles.gallery}>
                         {data.map((item: GalleryItem, index) => (
-                            
                             <div key={index} className={styles.gallery_item}>
-                            <div style={{backgroundImage: `url(${item.imageUrl.slice(item.imageUrl.indexOf('/public') + 7)})`,}}
+                            <div style={{backgroundImage: `url(${item.imageUrl.split('public')[1]})`,}}
                             className={styles.gallery_image}
                             />
                             <div className={styles.gallery_title}>{item.title}</div>
