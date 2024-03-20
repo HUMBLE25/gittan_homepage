@@ -16,7 +16,7 @@ export const config = {
 
   const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-      cb(null, 'public'); // 이미지를 저장할 폴더
+      cb(null, '/public'); // 이미지를 저장할 폴더
     },
     filename: function(req, file, cb) {
       // 파일 이름 설정 및 확장자 추가
