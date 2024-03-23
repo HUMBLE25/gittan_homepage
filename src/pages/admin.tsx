@@ -19,7 +19,7 @@ const Admin: React.FC = () => {
             formData.append('author', author);
             formData.append('content', content);
             formData.append('file', file);
-
+            console.log(file)
             try {
                 const response = await fetch('/api/gallery', {
                     method: 'POST',
