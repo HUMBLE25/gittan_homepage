@@ -19,7 +19,6 @@ const Admin: React.FC = () => {
             formData.append('author', author);
             formData.append('content', content);
             formData.append('file', file);
-            console.log(file)
             try {
                 const response = await fetch('/api/gallery', {
                     method: 'POST',
@@ -32,7 +31,7 @@ const Admin: React.FC = () => {
                 
                 const data = await response.json();
                 alert(data.message)
-                // location.reload();
+                location.reload();
             } catch (error) {
                 console.error('An error occurred:', error);
             }
@@ -42,6 +41,11 @@ const Admin: React.FC = () => {
         }
     };
 
+    const handleCancel = (event: React.MouseEvent) => {
+        event.preventDefault(); 
+        alert("취소되었습니다.");
+        location.reload();
+    };
     return (
         <div className={styles.wrapper}>
             <Header />
@@ -85,7 +89,7 @@ const Admin: React.FC = () => {
                         </div>
                         <div className={styles.form_submit_item}>
                             <button className={styles.form_submit} type="submit" >등록</button>
-                            <button className={styles.form_cancel} type="submit">취소</button>
+                            <button className={styles.form_cancel} type="button" onClick={handleCancel} >취소</button>
                         </div>
                     </form>
                 </div>

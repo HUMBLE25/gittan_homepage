@@ -61,9 +61,6 @@ export default async function POST(
         });
 
         if (req.method === 'POST') {
-            // POST 
-            console.log('POST 요청 처리');
-            console.log("파일 업로드 실험");
             let form = new multiparty.Form();
             let formResp:FormParseResult = await new Promise((resolve, reject) => {
                 form.parse(req, (err, fields, files) => {
@@ -83,12 +80,10 @@ export default async function POST(
             const { url } = await put(filePath,fileData,{ access: 'public' });
 
             const {title, author, content} = fields;
-                // //save data to DB
             const [rows, dataFields] = await connection.execute(
                 "INSERT INTO gallery (title, content, name, imageUrl) VALUES (?, ?, ?, ?)",
                 [title[0], content[0], author[0], url]
             );
-            // console.log(rows)
             if(rows) return res.json({message : "성공적으로 등록하였습니다."})
 
         } else {
@@ -97,7 +92,6 @@ export default async function POST(
                 "SELECT * FROM gallery ORDER BY creationTime DESC LIMIT 9 OFFSET 0"
               );
               const typedRows = rows as Row[];
-              console.log(typedRows)
               return res.json({ data: typedRows });
         }
     }  catch (error ) {

@@ -23,10 +23,8 @@ const GittanGallery: React.FC = () => {
                 method: 'get',
                 url: '/api/gallery',
             });
-            console.log(result.data.data)
             if(result.data.data[0]){
                 setData(result.data.data);
-                console.log(result.data.data)
             }else{
                 setData(false);
             }
