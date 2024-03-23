@@ -96,7 +96,7 @@ export default async function POST(
         }
     }  catch (error ) {
         console.error('An error occurred:', error);
-        return res.json({ message: 'Internal Server Error'});
+        return res.status(500).json({ message: 'Internal Server Error'});
     }
 }
 
