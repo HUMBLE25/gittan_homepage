@@ -26,6 +26,7 @@ const GittanGallery: React.FC = () => {
             console.log(result.data.data)
             if(result.data.data[0]){
                 setData(result.data.data);
+                console.log(result.data.data)
             }else{
                 setData(false);
             }
@@ -61,7 +62,7 @@ const GittanGallery: React.FC = () => {
                     <div className={styles.gallery}>
                         {data.map((item: GalleryItem, index) => (
                             <div key={index} className={styles.gallery_item}>
-                            <div style={{backgroundImage: `url(${item.imageUrl.split('public')[1]})`,}}
+                            <div style={{backgroundImage: `url(${item.imageUrl})`,}}
                             className={styles.gallery_image}
                             />
                             <div className={styles.gallery_title}>{item.title}</div>

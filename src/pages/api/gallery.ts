@@ -1,6 +1,6 @@
 // import { NextResponse, NextRequest } from 'next/server';
 import type { NextApiRequest, NextApiResponse } from 'next'
-import mysql from 'mysql2/promise';
+import mysql, { RowDataPacket } from 'mysql2/promise';
 import multiparty from 'multiparty'
 import { put } from "@vercel/blob";
 import fs from 'fs/promises';
@@ -11,8 +11,19 @@ export const config = {
     }
   }
 
-type ResponseData = {
-    message: string
+
+  interface Row {
+    id: number;
+    title: string;
+    content: string;
+    name: string;
+    imageUrl: string;
+    creationTime: Date;
+  }
+
+interface ResponseData  {
+    message?: string;
+    data?: Row[];
   }
 
 
@@ -82,15 +93,16 @@ export default async function POST(
 
         } else {
             //GET
-            const [rows, fields] = await connection.execute(
+            const [rows] = await connection.execute(
                 "SELECT * FROM gallery ORDER BY creationTime DESC LIMIT 9 OFFSET 0"
-            );
-            console.log(rows);
-            // return res.json({data:rows})
+              );
+              const typedRows = rows as Row[];
+              console.log(typedRows)
+              return res.json({ data: typedRows });
         }
     }  catch (error ) {
         console.error('An error occurred:', error);
-        // return NextResponse.json({ message: 'Internal Server Error', error: error });
+        return res.json({ message: 'Internal Server Error'});
     }
 }
 
