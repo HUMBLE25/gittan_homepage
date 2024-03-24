@@ -51,7 +51,7 @@ export default async function POST(
     res: NextApiResponse<ResponseData>
     ) {
     try {
-        const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
+        const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME,BLOB_READ_WRITE_TOKEN } = process.env;
         const connection = await mysql.createConnection({
             host: DB_HOST,
             port: parseInt(DB_PORT),
@@ -77,7 +77,10 @@ export default async function POST(
 
             const fileData = await fs.readFile(file.path);
             const filePath =  'img/'+ file.originalFilename;
-            const { url } = await put(filePath,fileData,{ access: 'public' });
+            const { url } = await put(filePath,fileData,{ 
+                access: 'public',
+                token : BLOB_READ_WRITE_TOKEN
+            });
 
             const {title, author, content} = fields;
             const [rows, dataFields] = await connection.execute(

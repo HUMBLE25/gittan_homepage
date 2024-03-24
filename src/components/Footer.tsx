@@ -13,7 +13,7 @@ const Footer = () => {
                         <div>&nbsp;| 이메일 : gittan@naver.com </div>
                     </div>
                     <div className={styles.footer_content}> 
-                        <div>TEL : 031-853-5028 </div> 
+                        <div><a href="tel : +82 010-8859-4055">TEL : 031-853-5535</a> </div> 
                         <div>&nbsp;| FAX : 0504-327-502 </div> 
                         <div>&nbsp;| 주소 : 경기도 의정부시 오목로 235 제일프라자 2층 202호 </div>
                     </div>

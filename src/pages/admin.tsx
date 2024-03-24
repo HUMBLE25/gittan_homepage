@@ -24,7 +24,6 @@ const Admin: React.FC = () => {
                     method: 'POST',
                     body: formData,
                 });
-                console.log("file : ",file)
                 if (!response.ok) {
                     throw new Error(`Server responded with status code ${response.status}`);
                 }
