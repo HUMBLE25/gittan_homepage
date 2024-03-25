@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 }
 
 .main_image{
@@ -22,6 +23,10 @@
     /*border: 2px solid blue;*/
 }
 
+.main_text{
+    color: white;
+    margin-left: 5%;
+}
 .overlay{
     width: 100%;
     height: 250px;
