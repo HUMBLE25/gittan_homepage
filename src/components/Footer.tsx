@@ -11,8 +11,12 @@ const Footer = () => {
                 <div className={styles.main_image} style={{backgroundImage:`url(/introduce_main_img.svg)`}}></div>
                 <div className={styles.overlay}></div>
                 <div className={styles.main_text}>
-                    TEL : 031-853-5535 <br/>
-                    EMAIL : gittan@naver.com <br/>
+                    <div className={styles.icon_item}>
+                        <div className={styles.icon} style={{backgroundImage:`url(/icon_call.svg)`}}></div>: 031-853-5535 <br/>
+                    </div>
+                    <div className={styles.icon_item}>
+                        <div className={styles.icon} style={{backgroundImage:`url(/icon_email.svg)`}}></div>: gittan@naver.com <br/>
+                    </div>
                 </div>
             </div>
 

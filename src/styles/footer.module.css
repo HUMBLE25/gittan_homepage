@@ -7,7 +7,6 @@
 .footer_call_wrapper{
     width: auto;
     height: 250px;
-    /*border: 2px solid red;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,13 +19,15 @@
     height: 250px;
     top :0px;
     position: absolute;
-    /*border: 2px solid blue;*/
 }
 
 .main_text{
     color: white;
     margin-left: 5%;
+    font-size: 32px;
+    position: relative;
 }
+
 .overlay{
     width: 100%;
     height: 250px;
@@ -34,19 +35,26 @@
     position: absolute;
     background: rgba(0, 0, 0, 0.60);
     transition: all 1.5s ease;
-    /* border: 2px solid blue;
-    */
-}
-
-.main_text{
-    font-size: 32px;
-    position: relative;
 }
 
 .call_number{
     text-decoration: none;
     color: white;
-    /* border: 2px solid red; */
+}
+
+.icon_item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: white;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 .footer_container {
@@ -59,20 +67,17 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    /* border: 3px solid red; */
     transition: all 1s ease; 
     padding-left: 2%;
 }
 
 .footer_text_wrapper {
-    /* width: 100%; */
     gap: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     transition: all 1s ease; 
-    /* border: 3px solid green; */
 }
 
 .footer_title_logo {
@@ -83,7 +88,6 @@
     background-position: center;
     background-size: 100% 100%;
     margin: 10px 0px 15px 0px;
-    /* border: 1px solid red; */
 }
 
 .footer_content_container{
