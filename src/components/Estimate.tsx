@@ -13,7 +13,7 @@ const Estimate: React.FC = () => {
                 <div className={styles.image} />
                 <div className={styles.company_name}>기탄산업개발</div>
                 <div className={styles.inquiry_text}>견적문의</div>
-                <div className={styles.text}>희망시공일시, 공사내용, 도면, 물량 내역서를 첨부하여 <br />아래의 메일로 문의해주세요. <br />메일 : gittan@naver.com</div>
+                <div className={styles.text}>희망시공일시, 공사내용, 도면, 물량 내역서를 첨부하여 <br />아래의 메일로 문의해주세요. <br />메일 : gittan@naver.com <br/>연락처 : 031-853-5535</div>
                 <div className={styles.footer}>
                     <div className={styles.footer_content}>
                         <div className={styles.do_not_show}>오늘하루 열지 않기</div>

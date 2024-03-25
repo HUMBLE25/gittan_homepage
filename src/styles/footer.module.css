@@ -1,3 +1,48 @@
+.container{
+    width: 100%;
+    height: 250px;
+}
+
+
+.footer_call_wrapper{
+    width: auto;
+    height: 250px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.main_image{
+    width: 100%;
+    height: 250px;
+    top :0px;
+    position: absolute;
+    border: 2px solid blue;/
+}
+
+.overlay{
+    width: 100%;
+    height: 250px;
+    top :0px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.60);
+    transition: all 1.5s ease;
+    border: 2px solid blue;
+}
+
+.main_text{
+    font-size: 32px;
+    position: relative;
+}
+
+.call_number{
+    text-decoration: none;
+    color: white;
+    border: 2px solid red;
+}
+
 .footer_container {
     width: 100%;
     height: 250px;
@@ -38,9 +83,11 @@
 .footer_content_container{
     /* border: 1px solid red; */
 }
+
 .footer_content{
     display: flex;
 }
+
 .footer_content div{
     color: #777777;
     font-size: 20px;
@@ -49,6 +96,10 @@
     line-height: 160%;
     word-wrap: break-word;
     transition: all 1s ease; 
+}
+
+.footer_content div a{
+    color: #777777;
 }
 
 @media (max-width: 480px) {
