@@ -7,7 +7,7 @@
 .footer_call_wrapper{
     width: auto;
     height: 250px;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,7 @@
     height: 250px;
     top :0px;
     position: absolute;
-    border: 2px solid blue;/
+    /*border: 2px solid blue;*/
 }
 
 .overlay{
@@ -29,7 +29,8 @@
     position: absolute;
     background: rgba(0, 0, 0, 0.60);
     transition: all 1.5s ease;
-    border: 2px solid blue;
+    /* border: 2px solid blue;
+    */
 }
 
 .main_text{
@@ -40,7 +41,7 @@
 .call_number{
     text-decoration: none;
     color: white;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .footer_container {
