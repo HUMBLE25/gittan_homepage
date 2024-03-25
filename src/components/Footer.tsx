@@ -11,11 +11,15 @@ const Footer = () => {
                 <div className={styles.main_image} style={{backgroundImage:`url(/introduce_main_img.svg)`}}></div>
                 <div className={styles.overlay}></div>
                 <div className={styles.main_text}>
-                    <div className={styles.icon_item}>
-                        <div className={styles.icon} style={{backgroundImage:`url(/icon_call.svg)`}}></div>: 031-853-5535 <br/>
+                    <div className={styles.main_title}>고객센터</div>
+                    <div className={styles.icon_item_number}>
+                        <div className={styles.icon} style={{backgroundImage:`url(/icon_call.svg)`}}></div>031.853.5535 <br/>
                     </div>
                     <div className={styles.icon_item}>
-                        <div className={styles.icon} style={{backgroundImage:`url(/icon_email.svg)`}}></div>: gittan@naver.com <br/>
+                        상담시간 : 9:00 ~ 20:00 | 점심 : 12:00 ~ 13:00
+                    </div>
+                    <div className={styles.icon_item}>
+                        문의메일 : gittan@naver.com 
                     </div>
                 </div>
             </div>
