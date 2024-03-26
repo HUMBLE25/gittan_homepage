@@ -2,7 +2,7 @@ import styles from '@/src/styles/footer.module.css';
 
 const Footer = () => {
     const handleCall = () => {
-        window.location.href = "tel:+821088594055";
+        window.location.href = "tel:+82318535535";
       };
     return (
         <div className={styles.container}>
