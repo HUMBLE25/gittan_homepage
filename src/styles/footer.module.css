@@ -56,7 +56,6 @@
     align-items: center;
     gap: 1%;
     transition: all 1s ease; 
-    /* border: 2px solid red; */
     margin: 1% 0% 1% 0%;
 }
 
@@ -131,26 +130,26 @@
 
 @media (max-width: 480px) {
     .footer_call_wrapper{
-        height: 150px;
+        height: 100px;
     }
     .main_image{
         height: 150px;
     }
 
-    .main_text{
-        font-size: 14px;
+    .main_text {
+        font-size: 10px;
     }
 
     .main_title{
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .overlay{
-        height: 150px;
+        height: 100px;
     }
 
     .icon_item_number{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .icon{

@@ -2,7 +2,7 @@ import styles from '@/src/styles/footer.module.css';
 
 const Footer = () => {
     const handleCall = () => {
-        window.location.href = "tel:+318535535";
+        window.location.href = "tel:+821088594055";
       };
     return (
         <div className={styles.container}>
@@ -35,7 +35,7 @@ const Footer = () => {
                             <div>&nbsp;| 이메일 : gittan@naver.com </div>
                         </div>
                         <div className={styles.footer_content}> 
-                            <div><a href="tel:+318535535" className={styles.call_number}>TEL : 031-853-5535</a> </div> 
+                            <div><a href="tel:+82318535535" className={styles.call_number}>TEL : 031-853-5535</a> </div> 
                             <div>&nbsp;| FAX : 0504-327-502 </div> 
                             <div>&nbsp;| 주소 : 경기도 의정부시 오목로 235 제일프라자 2층 202호 </div>
                         </div>

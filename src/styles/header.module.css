@@ -54,7 +54,7 @@
 .menu_wrapper {
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 18px; 
+    gap: 40px; 
     display: flex;
     /* border: 2px solid blue; */
 }
