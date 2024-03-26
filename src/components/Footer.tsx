@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className={styles.main_text}>
                     <div className={styles.main_title}>고객센터</div>
                     <div className={styles.icon_item_number}>
-                        <div className={styles.icon} style={{backgroundImage:`url(/icon_call.svg)`}}></div>031.853.5535 <br/>
+                        <div className={styles.icon} style={{backgroundImage:`url(/icon_call.png)`}}></div>031.853.5535 <br/>
                     </div>
                     <div className={styles.icon_item}>
                         상담시간 : 9:00 ~ 20:00 | 점심 : 12:00 ~ 13:00
