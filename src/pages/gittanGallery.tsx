@@ -32,7 +32,7 @@ const GittanGallery: React.FC = () => {
 
         fetchData();
     }, []);
-   
+
     return (
         <div className={styles.wrapper}>
             <Header />
@@ -60,12 +60,12 @@ const GittanGallery: React.FC = () => {
                     <div className={styles.gallery}>
                         {data.map((item: GalleryItem, index) => (
                             <div key={index} className={styles.gallery_item}>
-                            <div style={{backgroundImage: `url(${item.imageUrl})`,}}
-                            className={styles.gallery_image}
-                            />
-                            <div className={styles.gallery_title}>{item.title}</div>
-                            <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
-                        </div>
+                                <div style={{backgroundImage: `url(${item.imageUrl})`,}}
+                                className={styles.gallery_image}
+                                />
+                                <div className={styles.gallery_title}>{item.title}</div>
+                                <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
+                            </div>
                         ))}
                          {Array.from({ length: 9 - data.length }).map((_, index) => (
                          <div key={`empty-${index}`} className={styles.gallery_item}></div>
