@@ -14,6 +14,7 @@ const Header: React.FC = () => {
                 <Link href="/microPiles" className={styles.menuItem}>사업소개</Link>
                 <Link href="/constructionPerformance" className={styles.menuItem}>시공실적</Link>
                 <Link href="/gittanGallery" className={styles.menuItem}>기탄갤러리</Link>
+                <Link href="/contact" className={styles.menuItem}>견적문의</Link>
                 <div className={styles.menuItem}><a href='https://blog.naver.com/gittan'>공식블로그</a></div>
             </div>
         </div>

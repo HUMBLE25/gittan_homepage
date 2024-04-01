@@ -76,7 +76,7 @@ const GittanGallery: React.FC = () => {
                     </div>  
                 {/* 보드 바디 */}
                 <div className={styles.board_body}>
-                {selectedItem && <Modal item={selectedItem} onClose={() => setSelectedItem(null)}/>}
+                {selectedItem && <Modal item={selectedItem} onClose={() => setSelectedItem(null)} />}
                 {currentData && currentData.length > 0 ? (
                         <div className={styles.gallery}>
                             {currentData.map((item, index) => (
@@ -104,9 +104,7 @@ const GittanGallery: React.FC = () => {
                         ))}
                     </div>
                 </div>
-
                 </div>
-                
             </div>
             <Footer />
             
