@@ -263,7 +263,33 @@
     color: gray;
     /* border: 2px solid red; */
 }
+.board_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
 
+.pagination{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+}
+
+.pageLink{
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: border 0.5s ease;
+}
+.pageLink:hover {
+    border: 2px solid #3498db;
+  }
 
 @media (max-width: 480px) {
     .banner{
@@ -291,6 +317,23 @@
         font-size: 10px;
     }
     .board_page_button{
+        font-size: 10px;
+    }
+
+    .gallery_item{
+        width: calc(30% - 10px); 
+        height: 20%;
+        margin: auto; 
+    }
+
+    .gallery_image{
+        width: 100%;
+        height: 50px;
+    }
+    .gallery_title{
+        font-size: 8px;
+    }
+    .gallery_content{
         font-size: 10px;
     }
   }
