@@ -15,6 +15,12 @@
     /* gap: 5%; */
     transition: all 1s ease;
 }
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
 .close_button{
     background-color: white;
     width: 5%;
@@ -25,6 +31,16 @@
     transition: all 1s ease;
 }
 
+.delete_button{
+    background-color: white;
+    background-color:transparent;
+    color: red;
+}
+
+.delete_button:hover {
+    background-color: black;
+    color: white;
+  }
 .title{
     width: 90%;
     height: 5%;
