@@ -39,7 +39,7 @@
     height: 100%;
     top: 0;
     position: absolute;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(0, 0, 0, 0.20);
     transition: all 1s ease;
 }
 
@@ -69,9 +69,6 @@
     transition: all 1s ease;
     line-height: 1.7;
 }
-
-
-
 
 .body{
     width: 100%;
@@ -128,42 +125,72 @@
     position: relative;
     display: flex;
     flex-direction: column;
-   
     align-items: center;
     /* border:2px solid red; */
 }
 
 .inquiryForm{
     width: 100%;
+    height: auto;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-around;
-    /* gap: 2%; */
-    /* align-items: center; */
-    justify-content: center;
     margin-bottom: 10%;
+    /* border: 2px solid green; */
 }
 
 .item{
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    height: 50px;
+    margin-top: 2%;
+}
+
+.textitem{
+    width: 100%;
+    height: 330px;
+    /* border: 2px solid red; */
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .subitem{
     font-size: 12px;
+    font-weight:800;
 }
 
 .subitem span{
     color: red;
 }
 
+.inputField{
+    color: #EAEAEA;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.textareaField{
+    height: 300px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
 .submitButton{
     width: 20%;
     color: white;
     background-color: black;
-    /* border: 2px solid red; */
+    border-radius: 5px;
+    margin-top: 2%;
     margin-left: 80%;
 }
+
 .submitButton:hover{
     color: black;
     background-color: white;

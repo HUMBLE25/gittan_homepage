@@ -23,35 +23,28 @@ const Contact: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // 폼 데이터를 처리하는 로직, 예를 들어 API에 POST 요청을 보내는 등의 작업을 추가하세요.
+        //API 추가
         console.log(formData);
     };
-    const optionText = "*는 필수 입력란입니다.";
+    const optionText = "필수 입력란입니다.";
     return (
         <div className={styles.wrapper}>
             <Header/>
             {/* 배너 */} 
             <div className={styles.banner}>
-                <div className={styles.banner_img} style={{backgroundImage:`url(/gallery_main_img.svg)`}}/>
+                <div className={styles.banner_img} style={{backgroundImage:`url(/contactImg.svg)`}}/>
                 <div className={styles.banner_overlay} />
-                <div className={styles.banner_title}>기탄갤러리</div>
-                <div className={styles.banner_contents}>기탄산업개발은 성공적인 시공사례들로 신뢰를 드리고 있으며 <br></br> 세로운 기술을 선도하고 안전을 최우선으로 하는 전문기술기업입니다.</div>
+                <div className={styles.banner_title}>견적문의</div>
+                {/* <div className={styles.banner_contents}>기탄산업개발은 성공적인 시공사례들로 신뢰를 드리고 있으며 <br></br> 세로운 기술을 선도하고 안전을 최우선으로 하는 전문기술기업입니다.</div> */}
             </div>
             {/* 바디 */}
             <div className={styles.body}>
                 <div className={styles.board_wrapper}>
-                    <div className={styles.board_header}>
-                        <div className={styles.board_title_wrapper}>
-                            <div className={styles.board_box}></div>
-                            <div className={styles.board_title}>PhotoGallery</div>    
-                        </div>
-                        <div className={styles.board_index}>Home{`<`}PhotoGallery</div>
-                    </div>  
                 {/* 보드 바디 */}
                 <div className={styles.board_body}>
                 <form onSubmit={handleSubmit} className={styles.inquiryForm}>
                     <div className={styles.item}>
-                        <div className={styles.subitem}>이름<span>*</span></div>
+                        <div className={styles.subitem}>업체명<span>*</span></div>
                         <input
                             type="text"
                             name="name"
@@ -74,7 +67,7 @@ const Contact: React.FC = () => {
                         />
                     </div>
                     <div className={styles.item}>
-                        <div className={styles.subitem}>이메일</div>
+                        <div className={styles.subitem}>이메일<span>*</span></div>
                     <input
                         type="text"
                         name="phoneNumber"
@@ -96,12 +89,23 @@ const Contact: React.FC = () => {
                     />
                     </div>
                     <div className={styles.item}>
-                        <div className={styles.subitem}>추가내용<span>*</span></div>
+                        <div className={styles.subitem}>공사내용<span>*</span></div>
+                    <input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder= {optionText}
+                        className={styles.inputField}
+                    />
+                    </div>
+                    <div className={styles.textitem}>
+                        <div className={styles.subitem}>추가내용</div>
                         <textarea
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            placeholder= {optionText}
+                            // placeholder= {optionText}
                             className={styles.textareaField}
                         />
                     </div>

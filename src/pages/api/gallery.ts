@@ -12,7 +12,6 @@ export const config = {
     }
   }
 
-
   interface Row {
     id: number;
     title: string;
