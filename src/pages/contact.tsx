@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
         name: '',
         email: '',
         phoneNumber: '',
+        hopeDate:'',
         subject: '',
         message: '',
       });
@@ -21,10 +22,27 @@ const Contact: React.FC = () => {
         }));
       };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        //API 추가
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
         console.log(formData);
+        // API 추가
+        try {
+            const response = await fetch('/api/mail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // 내용 타입을 JSON으로 설정
+                },
+                body: JSON.stringify(formData)
+            });
+            if (!response.ok) {
+                throw new Error(`Server responded with status code ${response.status}`);
+            }
+            const data = await response.json();
+            alert(data.message)
+            location.reload();
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
     };
     const optionText = "필수 입력란입니다.";
     return (
@@ -54,20 +72,8 @@ const Contact: React.FC = () => {
                             className={styles.inputField}
                         />
                     </div>
-                   
                     <div className={styles.item}>
                         <div className={styles.subitem}>연락처<span>*</span></div>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder= {optionText}
-                            className={styles.inputField}
-                        />
-                    </div>
-                    <div className={styles.item}>
-                        <div className={styles.subitem}>이메일<span>*</span></div>
                     <input
                         type="text"
                         name="phoneNumber"
@@ -78,11 +84,22 @@ const Contact: React.FC = () => {
                     />
                     </div>
                     <div className={styles.item}>
+                        <div className={styles.subitem}>이메일<span>*</span></div>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder= {optionText}
+                            className={styles.inputField}
+                        />
+                    </div>
+                    <div className={styles.item}>
                         <div className={styles.subitem}>희망공사일시<span>*</span></div>
                     <input
                         type="text"
-                        name="subject"
-                        value={formData.subject}
+                        name="hopeDate"
+                        value={formData.hopeDate}
                         onChange={handleChange}
                         placeholder= {optionText}
                         className={styles.inputField}
