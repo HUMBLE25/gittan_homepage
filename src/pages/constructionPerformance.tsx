@@ -6,7 +6,15 @@ import styles from '@/src/styles/constructionPerformance.module.css';
 const ConstructionPerformance: React.FC = () => {
     return (
         <div className={styles.wrapper}>
-
+             <style global jsx>{`
+                html,
+                body,
+                body > div:first-child,
+                div#__next,
+                div#__next > div {
+                    margin: 0px;
+                }`}
+            </style>
             <Header />
 
             <div className={styles.banner_container}>

@@ -8,6 +8,15 @@ import Link from 'next/link';
 const MicroPiles: React.FC  = () => {
     return (
         <div className={styles.wrapper}>
+             <style global jsx>{`
+                html,
+                body,
+                body > div:first-child,
+                div#__next,
+                div#__next > div {
+                    margin: 0px;
+                }`}
+            </style>
             <Header />  
             {/* 배너 */}
             <div className={styles.banner}>

@@ -3,7 +3,6 @@
 import React, { useState, useEffect,useRef } from 'react';
 import styles from '@/src/styles/page.module.css';
 import Link from 'next/link';
-import '@/src/styles/globals.css'
 import Estimate from '@/src/components/Estimate';
 import Footer from '@/src/components/Footer';
 import Header from '@/src/components/Header';
@@ -149,8 +148,6 @@ const Home: React.FC = () => {
        
       </div>
       </div>
-
-
       
       <Footer/>
     </div>
