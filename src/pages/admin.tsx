@@ -97,7 +97,7 @@ const Admin: React.FC = () => {
                         </div>
                         <div className={styles.form_submit_item}>
                             <button className={styles.form_submit} type="submit" >등록</button>
-                            <button className={styles.form_cancel} type="button" onClick={handleCancel} >취소</button>
+                            <button className={styles.form_submit} type="button" onClick={handleCancel} >취소</button>
                         </div>
                     </form>
                 </div>

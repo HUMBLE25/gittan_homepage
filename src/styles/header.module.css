@@ -11,7 +11,7 @@
 }
 
 .logo_wrapper {
-    width: 30%;
+    width: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,9 +106,6 @@
         width: 80px; 
         height: 30px;
     }
-    .logo_text{
-        font-size: 14px;
-    }
     .menu_wrapper{
         gap: 10px;
     }
@@ -123,17 +120,10 @@
         height: 20px;
     }
     .logo_wrapper{
-        width: 35%;
-    }
-    .logo_image{
-        width: 40px; 
-        height: 40px;
-    }
-    .logo_text{
-        font-size: 20px;
+        width: 15%;
     }
     .menuItem {
-        font-size: 12px;
+        font-size: 10px;
     }
   }
 
@@ -143,12 +133,9 @@
         height: 60px;
     }
     .logo_wrapper{
-        width: 30%;
-    }
-    .logo_text{
-        font-size: 24px;
+        width: 18%;
     }
     .menuItem {
-        font-size: 16px;
+        font-size: 14px;
     }
   }
