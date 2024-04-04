@@ -194,7 +194,6 @@
     background-size: 100% 100%;
     background-position: center;
     border: 5px solid #BDBDBD;
-
 }
 
 .gallery_title, .gallery_content{
@@ -305,7 +304,9 @@
     .banner_contents{
         font-size: 10px;
     }
-
+    .board_header{
+        background-size: 100% 1px;
+    }
     .board_title{
         font-size: 12px;
     }
@@ -330,7 +331,9 @@
     .gallery_image{
         width: 100%;
         height: 50px;
+        border: 2px solid #BDBDBD;
     }
+
     .gallery_title{
         font-size: 8px;
     }

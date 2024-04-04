@@ -172,9 +172,15 @@
 }
 
 .inputField{
+    width: 98%;
     height: 30px;
     border-width: 1px;
     border-radius: 5px;
+    /* border: 2px solid red; */
+    padding: 1% 1% 1% 1%;
+    text-align:calc(100% -10px);
+    font-size: 14px;
+    color:#EEF1F2;
 }
 
 .textareaField{
@@ -188,7 +194,7 @@
     color: white;
     background-color: black;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 2%;
     margin-left: 85%;
 }
@@ -221,7 +227,7 @@
 
     .subitem{
         font-size: 12px;
-        font-weight:800;
+        font-weight:500;
     }
     
     .inputField{
@@ -235,7 +241,12 @@
     }
 
     .inputField{
-        height: 15px;
+        width: 97%;
+        height: 25px;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 0% 0% 0% 3%;
+        font-size: 10px;
     }
 
     .textareaField{
@@ -245,5 +256,19 @@
         width: 20%;
         margin-left: 80%;
         font-size: 8px;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .submitButton{
+        font-size: 12px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .submitButton{
+        width: 20%;
+        margin-left: 80%;
+        font-size: 18px;
     }
   }
