@@ -7,8 +7,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* border: 2px solid violet; */
 }
 
 .banner {
@@ -180,7 +178,7 @@
     padding: 1% 1% 1% 1%;
     text-align:calc(100% -10px);
     font-size: 14px;
-    color:#EEF1F2;
+    color:black;
 }
 
 .textareaField{

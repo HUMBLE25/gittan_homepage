@@ -95,6 +95,7 @@ const Admin: React.FC = () => {
                             <div className={styles.form_item_title}>파일</div>
                             <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
                         </div>
+                        <div className={styles.form_line}></div>
                         <div className={styles.form_submit_item}>
                             <button className={styles.form_submit} type="submit" >등록</button>
                             <button className={styles.form_submit} type="button" onClick={handleCancel} >취소</button>
