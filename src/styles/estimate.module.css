@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
+    cursor: pointer;
     /* border: 2px solid red; */
   }
 
