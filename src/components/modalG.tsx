@@ -28,7 +28,7 @@ const ModalG: React.FC<ModalProps> = ({ item, onClose, onDeleteSuccess }) => {
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>
         <div className={styles.header}>
-          <button onClick={onClose} className={styles.close_button}>X</button>
+          <button onClick={onClose} className={styles.close_button}>&larr;</button>
           <button onClick={onDelete} className={styles.delete_button}>Delete</button>
         </div>
         <div className={styles.title}>{item.title}</div>

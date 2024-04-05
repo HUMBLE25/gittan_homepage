@@ -4,18 +4,20 @@ const nodemailer = require('nodemailer');
 
 interface TemplateParams {
     name: string;
+    email: string;
     phoneNumber: string;
     hopeDate: string;
     subject: string;
     message: string;
   }
 
-export function getTemplate({ name, phoneNumber, hopeDate,subject,message }:TemplateParams) {
+export function getTemplate({ name, email, phoneNumber, hopeDate,subject,message }:TemplateParams) {
     const mytemplate = `
           <html>
               <body>
                   <h1>업체명 : ${name}</h1>
                   <hr />
+                  <div>연락처: ${email}</div>
                   <div>연락처: ${phoneNumber}</div>
                   <div>희망공사일: ${hopeDate}</div>
                   <div>공사내용: ${subject}</div>
@@ -42,10 +44,10 @@ export default async function POST(
                     pass: EMAIL_PASS,
                 }
             })
-            const template = getTemplate({name, phoneNumber, hopeDate, subject,message})
+            const template = getTemplate({name, email, phoneNumber, hopeDate, subject,message})
             const result = await transporter.sendMail({
                 from: EMAIL_SENDER,
-                to: email,
+                to: "gittan@naver.com",
                 subject: `${name}공사견적문의`,
                 html: template
             })
