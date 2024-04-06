@@ -149,6 +149,12 @@
     .main_title{
         font-size: 10px;
     }
+    .main_sub_title{
+        font-size: 10px;
+    }
+    .footer_content_text{
+        font-size: 10px;
+    }
 
     .overlay{
         height: 100px;
@@ -194,10 +200,10 @@
     .footer_title_text{
         font-size: 16px;
     }
-
-    .footer_content_text{
-        font-size: 12px;
+    .main_sub_title{
+        font-size: 10px;
     }
+
     .footer_content{
         display: flex;
         flex-wrap: wrap;
