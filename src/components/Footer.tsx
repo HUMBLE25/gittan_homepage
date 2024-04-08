@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className={styles.main_image} style={{backgroundImage:`url(/introduce_main_img.svg)`}}></div>
                 <div className={styles.overlay}></div>
                 <div className={styles.main_text}>
-                    <div className={styles.main_title}>고객센터(<p className={styles.main_sub_title}>클릭하면 전화가 연결됩니다.</p>) </div>
+                    <div className={styles.main_title}>고객센터( <p className={styles.main_sub_title}>클릭하면 전화가 연결됩니다.</p> ) </div>
                     <div className={styles.icon_item_number}>
                         <div className={styles.icon} style={{backgroundImage:`url(/icon_call.png)`}}></div>031.853.5535 <br/>
                     </div>
