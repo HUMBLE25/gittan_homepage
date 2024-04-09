@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "기탄산업개발",
-  description: "안녕세요!, 기탄 산업 개발입니다.",
+  description: "내진보강시공 전문건설기업 기탄산업개발 \n Micro Piles & Helix Piles 전문시공업체",
   icons:'/gittan_logo.svg',
   
 };
