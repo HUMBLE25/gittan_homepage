@@ -17,7 +17,7 @@ export function getTemplate({ name, email, phoneNumber, hopeDate,subject,message
               <body>
                   <h1>업체명 : ${name}</h1>
                   <hr />
-                  <div>연락처: ${email}</div>
+                  <div>이메일: ${email}</div>
                   <div>연락처: ${phoneNumber}</div>
                   <div>희망공사일: ${hopeDate}</div>
                   <div>공사내용: ${subject}</div>
