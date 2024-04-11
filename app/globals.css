@@ -2,5 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    margin:0px;
+    padding: 0px;
+    body > div:first-child,
+    div#__next,
+    div#__next > div {
+        margin: 0px;
+    }
+}
+div #__next{
+    margin: 0px;
+}
 

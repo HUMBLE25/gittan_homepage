@@ -47,7 +47,7 @@ const Admin: React.FC = () => {
     };
     return (
         <div className={styles.wrapper}>
-             <style global jsx>{`
+             {/* <style global jsx>{`
                 html,
                 body,
                 body > div:first-child,
@@ -55,7 +55,7 @@ const Admin: React.FC = () => {
                 div#__next > div {
                     margin: 0px;
                 }`}
-            </style>
+            </style> */}
             <Header />
             {/* 배너 */}
             <div className={styles.banner}>
