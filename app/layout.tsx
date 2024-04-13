@@ -18,6 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* 이자리에 추가하면 되겠다. */}
+      <meta name="naver-site-verification" content="74fe3e706c585a3ecad2f51549918a5a307ff211" />
       <body className={inter.className}>{children}</body>
     </html>
   );
