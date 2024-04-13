@@ -106,15 +106,15 @@ export default async function handler(
 
           try {
             const [rows] = await connection.execute<ResultSetHeader>(
-              "DELETE FROM gallery WHERE id = ?", // SQL 쿼리에서 ?를 플레이스홀더로 사용합니다.
-              [id] // 두 번째 인자로 id 값을 전달합니다.
+              "DELETE FROM gallery WHERE id = ?",
+              [id]
             );
         
             if (rows.affectedRows > 0) {
-              // 삭제가 성공적으로 이루어진 경우
+              
               res.json({ message: "Item deleted successfully." });
             } else {
-              // 해당 ID를 가진 항목이 없는 경우
+              
               res.status(404).json({ message: "Item not found." });
             }
           } catch (error) {
