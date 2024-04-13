@@ -7,12 +7,20 @@ const Admin: React.FC = () => {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('기탄산업개발');
     const [content, setContent] = useState('');
-    const fileInput = useRef<HTMLInputElement>(null);
+    const fileInputRefs = [
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null)
+    ];
+    // const fileInput = useRef<HTMLInputElement>(null);
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        if (fileInput.current && fileInput.current.files && fileInput.current.files.length > 0) {
-            const file = fileInput.current.files[0];
+        console.dir(fileInputRefs)
+        if (fileInputRefs[0].current && fileInputRefs[0].current.files && fileInputRefs[0].current.files.length > 0) {
+            const file = fileInputRefs[0].current.files[0];
             const formData = new FormData();
 
             formData.append('title', title);
@@ -91,14 +99,15 @@ const Admin: React.FC = () => {
                             onChange={(e) => setContent(e.target.value)}
                             />
                         </div>
+                     
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}>파일</div>
                             <div className={styles.form_file_item}>
-                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
-                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
-                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
-                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
-                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                                <input className={styles.form_input} type="file" accept="image/*" multiple ref={fileInputRefs[0]} />
+                                <input className={styles.form_input} type="file" accept="image/*" multiple ref={fileInputRefs[1]} />
+                                <input className={styles.form_input} type="file" accept="image/*" multiple ref={fileInputRefs[2]} />
+                                <input className={styles.form_input} type="file" accept="image/*" multiple ref={fileInputRefs[3]} />
+                                <input className={styles.form_input} type="file" accept="image/*" multiple ref={fileInputRefs[4]} />
                             </div>
                         </div>
                         <div className={styles.form_line}></div>
