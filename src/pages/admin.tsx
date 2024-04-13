@@ -93,7 +93,13 @@ const Admin: React.FC = () => {
                         </div>
                         <div className={styles.form_item}>
                             <div className={styles.form_item_title}>파일</div>
-                            <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                            <div className={styles.form_file_item}>
+                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                                <input className={styles.form_input} type="file" accept="image/*" ref={fileInput} />
+                            </div>
                         </div>
                         <div className={styles.form_line}></div>
                         <div className={styles.form_submit_item}>
