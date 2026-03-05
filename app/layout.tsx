@@ -8,7 +8,7 @@ const notoSansKr = Noto_Sans_KR({ subsets: ['latin'], weight: ['400', '500', '70
 export const metadata: Metadata = {
   title: '기탄기업개발',
   description: '마이크로파일 및 헬릭스파일 전문 시공업체',
-  icons: '/gittan_logo.svg',
+  icons: '/gittan_favicon_logo.svg',
 };
 
 export default function RootLayout({
