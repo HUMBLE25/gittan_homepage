@@ -1,238 +1,142 @@
-.container{
-    width: 100%;
-    height: 250px;
+﻿/* One-line summary: Responsive footer that preserves readability and layout integrity across devices. */
+.container {
+  width: 100%;
 }
 
-
-.footer_call_wrapper{
-    width: auto;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-    transition: all 1.5s ease;
+.footer_call_wrapper {
+  width: 100%;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
 }
 
-.main_image{
-    width: 100%;
-    height: 250px;
-    top :0px;
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    transition: all 1.5s ease;
+.main_image {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
 }
 
-.main_text{
-    color: white;
-    margin-left: 10%;
-    font-size: 20px;
-    position: relative;
-    transition: all 1.5s ease;
+.overlay {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.main_title{
-    font-size: 24px;
-    display: flex;
-    align-items: center;
+.main_text {
+  color: #fff;
+  margin-left: clamp(16px, 7vw, 120px);
+  margin-right: 14px;
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  position: relative;
+  z-index: 2;
 }
 
-.main_sub_title{
-    font-size: 20px;
-    color: #D5D5D5;
-    text-align: center;
-}
-.overlay{
-    width: 100%;
-    height: 250px;
-    top :0px;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.60);
-    transition: all 1.5s ease;
+.main_title {
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
 }
 
-.call_number{
-    text-decoration: none;
-    color: white;
-    transition: all 1s ease; 
-}
-.icon_item_number{
-    font-size: 48px;
-    display: flex;
-    align-items: center;
-    gap: 1%;
-    transition: all 1s ease; 
-    margin: 1% 0% 1% 0%;
+.main_sub_title {
+  font-size: clamp(0.8rem, 1.7vw, 1.1rem);
+  color: #d5d5d5;
+  margin: 0;
 }
 
-.icon_item{
-    display: flex;
-    align-items: center;
-    gap: 2%;
+.call_number {
+  text-decoration: none;
+  color: inherit;
 }
 
-.icon{
-    width: 48px;
-    height: 48px;
-    background-position: center;
-    background-size: 100% 100%;
-    transition: all 1s ease; 
+.icon_item_number {
+  font-size: clamp(1.2rem, 4vw, 2.6rem);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.icon_item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+}
+
+.icon {
+  width: clamp(20px, 3vw, 42px);
+  height: clamp(20px, 3vw, 42px);
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .footer_container {
-    width: 100%;
-    height: 250px;
-    padding-left: 10%;
-    position: relative;
-    background: #373737;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    transition: all 1s ease; 
-    padding-left: 2%;
+  width: 100%;
+  min-height: 180px;
+  position: relative;
+  background: #373737;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 18px 14px;
 }
 
 .footer_text_wrapper {
-    gap: 10px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    transition: all 1s ease; 
+  width: min(96%, 1200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 12px;
 }
 
 .footer_title_logo {
-    width: 220px;
-    height: 80px;
-    transition: all 1s ease; 
-    background-image: url('/gittan_logo_gray.svg');
-    background-position: center;
-    background-size: 100% 100%;
-    margin: 10px 0px 15px 0px;
+  width: clamp(120px, 20vw, 220px);
+  height: clamp(40px, 7vw, 80px);
+  background-image: url('/gittan_logo_gray.svg');
+  background-position: center;
+  background-size: 100% 100%;
 }
 
-.footer_content_container{
-    /* border: 1px solid red; */
+.footer_content_container {
+  display: grid;
+  gap: 8px;
 }
 
-.footer_content{
-    display: flex;
+.footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
 }
 
-.footer_content div{
-    color: #777777;
-    font-size: 20px;
-    font-family: 'Nanum Gothic';
-    font-weight: 400;
-    line-height: 160%;
-    word-wrap: break-word;
-    transition: all 1s ease; 
+.footer_content div {
+  color: #9a9a9a;
+  font-size: clamp(0.72rem, 1.7vw, 1rem);
+  font-weight: 400;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
-.footer_content div a{
-    color: #777777;
+.footer_content div a {
+  color: inherit;
 }
 
-@media (max-width: 480px) {
-    .footer_call_wrapper{
-        height: 100px;
-    }
-    .main_image{
-        height: 150px;
-    }
-
-    .main_text {
-        font-size: 10px;
-    }
-
-    .main_title{
-        font-size: 10px;
-    }
-    .main_sub_title{
-        font-size: 8px;
-    }
-    .footer_content_text{
-        font-size: 10px;
-    }
-
-    .overlay{
-        height: 100px;
-    }
-
-    .icon_item_number{
-        font-size: 16px;
-    }
-
-    .icon{
-        width: 20px;
-        height: 20px;
-    }
-
-    .footer_container {
-        height: 100px;
-    }
-    .footer_title_logo{
-        width: 100px;
-        height: 25px;
-    }
-
-    .footer_content_text{
-        font-size: 8px;
-    }
-    .footer_content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .footer_content div{
-        font-size: 8px;
-    }
-    .footer_text_wrapper {
-        gap: 5px;
-    }
+@media (min-width: 900px) {
+  .footer_call_wrapper {
+    min-height: 250px;
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
-    .footer_container {
-        height: 150px;
-    }
-
-    .footer_title_text{
-        font-size: 16px;
-    }
-    .main_sub_title{
-        font-size: 10px;
-    }
-
-    .footer_content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .footer_content div{
-        font-size: 12px;
-    }
+  .footer_container {
+    min-height: 220px;
   }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .footer_container {
-        height: 200px;
-    }
-
-    .footer_title_text{
-        font-size: 20px;
-    }
-
-    .footer_content_text{
-        font-size: 16px;
-    }
-
-    .footer_content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .footer_content div{
-        font-size: 16px;
-    }
-  }
+}

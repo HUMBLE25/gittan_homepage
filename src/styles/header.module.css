@@ -1,141 +1,82 @@
+﻿/* One-line summary: Responsive header that wraps navigation safely on mobile and tablet widths. */
 .header_container {
-    width: 100%; 
-    padding: 0% 2% 0% 2%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 1s ease;
-    box-sizing: border-box;
-    /* border: 3px solid red; */
+  width: 100%;
+  padding: 10px 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background: #eef1f2;
 }
 
 .logo_wrapper {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    transition: all 1s ease;
-    text-decoration: none;
-    padding: 0.5%;
-    gap:1%;
-    /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.logo_image{
-    width: 160px; 
-    height: 60px;
-    background-image: url('/gittan_logo.svg');
-    background-size: 100% 100%;
-    background-position: center;
-    transition: all 1s ease;
-    /* border: 2px solid red; */
+.logo_image {
+  width: clamp(112px, 18vw, 168px);
+  height: clamp(40px, 6vw, 60px);
+  background-image: url('/gittan_logo.svg');
+  background-size: 100% 100%;
+  background-position: center;
 }
 
-.logo_text {
-    width: 100%;
-    color: black;
-    font-size: 28px;
-    font-family: 'Nanum Gothic';
-    font-weight: 600;
-    word-wrap: break-word;
-    transition: all 1s ease; 
-    padding-left: 2%;
-    /* border: 2px solid black; */
-}
-
-.spacer{
-    width: 100px;
-    height: 74px;
-    /* border: 2px solid red; */
+.spacer {
+  display: none;
 }
 
 .menu_wrapper {
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 40px; 
-    display: flex;
-    /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 14px;
+  flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .menuItem {
-    text-decoration: none;
-    color:inherit;
-    position: relative; 
-    display: inline-block; 
-    color: black;
-    font-size: 20px;
-    font-family: 'Nanum Gothic';
-    font-weight: 400;
-    word-wrap: break-word;
-    transition: all 1s ease;
-    cursor: pointer;
-    /* border: 2px solid red; */
+  text-decoration: none;
+  color: #111;
+  position: relative;
+  display: inline-block;
+  font-size: clamp(0.8rem, 1.8vw, 1.08rem);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.menuItem::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #111;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.25s ease;
+}
+
+.menuItem:hover::after {
+  width: 100%;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .header_container {
+    justify-content: center;
   }
 
-  .menuItem::after {
-    content: '';
-    position: absolute;
-    width: 0; 
-    height: 2px; 
-    background-color: black;
-    bottom: 0;
-    left: 0;
-    transition: width 1s ease; 
-  }
-
-  .menuItem:hover::after {
+  .menu_wrapper {
     width: 100%;
+    justify-content: center;
   }
-
-  .menuItem a{
-    text-decoration: none;
-    color:inherit;
-  }
-
-@media (max-width: 480px) {
-    .spacer{
-        width: 20px;
-        height: 10px;
-    }
-    .logo_wrapper{
-        width: 25%;
-    }
-    .logo_image{
-        width: 80px; 
-        height: 30px;
-    }
-    .menu_wrapper{
-        gap: 10px;
-    }
-    .menuItem {
-        font-size: 8px;
-    }
-  }
-
-  @media (min-width: 481px) and (max-width: 768px) {
-    .spacer{
-        width: 40px;
-        height: 20px;
-    }
-    .logo_wrapper{
-        width: 15%;
-    }
-    .menuItem {
-        font-size: 10px;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .spacer{
-        width: 40px;
-        height: 60px;
-    }
-    .logo_wrapper{
-        width: 18%;
-    }
-    .menuItem {
-        font-size: 14px;
-    }
-  }
+}
