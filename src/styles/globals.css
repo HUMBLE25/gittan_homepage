@@ -1,14 +1,18 @@
-#__next{
+/* One-line summary: Global base styles with Korean-safe font stack and bottom safe area for fixed CTA. */
+#__next {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding:0;
+    padding: 0;
     background: #EEF1F2;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: #EEF1F2;
+    font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
 }

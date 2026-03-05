@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    margin:0px;
-    padding: 0px;
-    body > div:first-child,
-    div#__next,
-    div#__next > div {
-        margin: 0px;
-    }
-}
-div #__next{
-    margin: 0px;
+/* One-line summary: App-router global reset with Korean-safe font and fixed CTA safe spacing. */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
 }
 
+div#__next {
+    margin: 0;
+}
