@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gittan.kr"),
 
   title: {
-    default: "기탄기업개발",
-    template: "%s | 기탄기업개발",
+    default: "기탄산업개발",
+    template: "%s | 기탄산업개발",
   },
 
   description: "마이크로파일 및 헬릭스파일 전문 시공업체",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "헬릭스파일",
     "기초공사",
     "지반공사",
-    "기탄기업개발",
+    "기탄산업개발",
   ],
 
   icons: {
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "기탄기업개발",
+    title: "기탄산업개발",
     description: "마이크로파일 및 헬릭스파일 전문 시공업체",
     url: "https://gittan.kr",
-    siteName: "기탄기업개발",
+    siteName: "기탄산업개발",
     locale: "ko_KR",
     type: "website",
   },

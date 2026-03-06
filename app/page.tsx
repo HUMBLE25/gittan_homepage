@@ -12,11 +12,11 @@ const STAGE_IMAGES = ['/mainpage_img1.svg', '/mainpage_img2.svg', '/mainpage_img
 
 const SERVICE_PILLARS = [
   {
-    title: 'Micro Piles 전문 시공',
+    title: '마이크로파일 전문 시공',
     description: '협소 구간과 구조물 인접 현장에서도 안정적으로 보강 시공합니다.',
   },
   {
-    title: 'Helix Piles 전문 시공',
+    title: '헬릭스파일 전문 시공',
     description: '무소음·무진동 중심 공법으로 도심·민원 구간 리스크를 줄입니다.',
   },
   {
@@ -108,11 +108,9 @@ const Home: React.FC = () => {
 
         <section className={styles.heroContent}>
           <p className={styles.heroEyebrow}>GITTAN INDUSTRIAL DEVELOPMENT</p>
-          <h1 className={styles.heroTitle}>결과로 신뢰를 만드는 토목 보강 전문 시공팀</h1>
+          <h1 className={styles.heroTitle}>여러분의 산업 성공 파트너, 기탄산업개발</h1>
           <p className={styles.heroDescription}>
-            4단계 회전으로 기탄산업개발의 핵심 시공 역량을 보여줍니다.
-            <br />
-            각 멈춤 지점마다 실제 시공 이미지가 전환되며 전문성을 직관적으로 전달합니다.
+            마이크로파일과 헬릭스파일 전문 시공으로 지반 보강의 새로운 기준을 제시합니다.
           </p>
           <div className={styles.inlineCtaWrap}>
             <a className={styles.inlineCtaPrimary} href="tel:+821079905028">
