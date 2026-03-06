@@ -108,7 +108,7 @@ const Home: React.FC = () => {
 
         <section className={styles.heroContent}>
           <p className={styles.heroEyebrow}>GITTAN INDUSTRIAL DEVELOPMENT</p>
-          <h1 className={styles.heroTitle}>여러분의 산업 성공 파트너, 기탄산업개발</h1>
+          <h1 className={styles.heroTitle}>여러분의 산업 성공 파트너, <br></br>기탄산업개발</h1>
           <p className={styles.heroDescription}>
             마이크로파일과 헬릭스파일 전문 시공으로 지반 보강의 새로운 기준을 제시합니다.
           </p>
