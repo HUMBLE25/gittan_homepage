@@ -9,6 +9,24 @@ import Header from '@/src/components/Header';
 
 // One-line summary: Landing page with slower four-stop Y-axis logo rotation synced to construction background transitions.
 const STAGE_IMAGES = ['/mainpage_img1.svg', '/mainpage_img2.svg', '/mainpage_img3.svg', '/mainpage_img4.svg'];
+const LOADING_STEPS = [
+  'ㄱ',
+  '기',
+  '기ㅌ',
+  '기타',
+  '기탄',
+  '기탄 ㅅ',
+  '기탄 사',
+  '기탄 산',
+  '기탄 산ㅇ',
+  '기탄 산어',
+  '기탄 산업',
+  '기탄 산업 ㄱ',
+  '기탄 산업 개',
+  '기탄 산업 개ㅂ',
+  '기탄 산업 개바',
+  '기탄 산업 개발',
+];
 
 const SERVICE_PILLARS = [
   {
@@ -31,13 +49,28 @@ const SERVICE_PILLARS = [
 
 const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingStepIndex, setLoadingStepIndex] = useState(0);
   const [stageIndex, setStageIndex] = useState(0);
   const [logoAngle, setLogoAngle] = useState(0);
   const timeoutRef = useRef<number[]>([]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setIsLoading(false), 1200);
-    return () => window.clearTimeout(timer);
+    const STEP_MS = 100;
+    const FINAL_HOLD_MS = 0;
+
+    const intervalId = window.setInterval(() => {
+      setLoadingStepIndex((prev) => {
+        if (prev >= LOADING_STEPS.length - 1) {
+          window.clearInterval(intervalId);
+          window.setTimeout(() => setIsLoading(false), FINAL_HOLD_MS);
+          return prev;
+        }
+
+        return prev + 1;
+      });
+    }, STEP_MS);
+
+    return () => window.clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -48,8 +81,8 @@ const Home: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const SPIN_MS = 1400;
-    const HOLD_MS = 1850;
+    const SPIN_MS = 1800;
+    const HOLD_MS = 1700;
 
     let currentStage = 0;
     let currentAngle = 0;
@@ -87,7 +120,7 @@ const Home: React.FC = () => {
     <div className={styles.wrapper}>
       {isLoading && (
         <div className={styles.loadingOverlay} aria-live="polite">
-          <div className={styles.loadingBrand}>GITTAN INDUSTRIAL DEVELOPMENT</div>
+          <div className={styles.loadingBrand}>{LOADING_STEPS[loadingStepIndex]}</div>
           <div className={styles.loadingBar}>
             <span className={styles.loadingProgress} />
           </div>
@@ -126,11 +159,9 @@ const Home: React.FC = () => {
         </section>
 
         <section className={styles.logoStageSection}>
-          <div className={styles.logoStage}>
-            <div className={styles.logoHalo} />
-            <div className={styles.logoCoreShell}>
+          <div className={styles.logoStage}>            <div className={styles.logoCoreShell}>
               <div className={styles.logoCore} style={{ transform: `rotateY(${logoAngle}deg)` }}>
-                <Image src="/gittan_favicon_logo.svg" alt="기탄산업개발 심볼 로고" width={230} height={230} priority />
+                <Image src="/gittan_favicon_logo.svg" alt="기탄산업개발 심볼 로고" width={230} height={230} className={styles.logoMark} priority />
               </div>
             </div>
           </div>
@@ -167,3 +198,6 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+

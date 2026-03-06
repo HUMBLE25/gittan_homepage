@@ -1,4 +1,4 @@
-﻿/* One-line summary: Responsive hero that fits in one PC viewport and stacks naturally on tablet/mobile. */
+﻿/* One-line summary: Responsive hero that fits in one PC viewport and features a clean rotating logo. */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -42,8 +42,12 @@
 }
 
 @keyframes loadGrow {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .heroSection {
@@ -159,17 +163,10 @@
 
 .logoStage {
   position: relative;
-  min-height: 310px;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logoHalo {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(129, 161, 231, 0.2) 0%, rgba(83, 127, 228, 0.1) 36%, rgba(20, 29, 48, 0) 72%);
 }
 
 .logoCoreShell {
@@ -179,29 +176,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: floatLogo 5.4s ease-in-out infinite;
+  animation: floatLogo 5.8s ease-in-out infinite;
+  perspective: 1200px;
 }
 
 .logoCore {
-  width: 228px;
-  height: 228px;
-  border-radius: 50%;
+  width: 230px;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at 36% 28%, rgba(255, 255, 255, 0.55) 0%, rgba(92, 131, 209, 0.52) 34%, rgba(17, 29, 58, 0.9) 100%);
-  box-shadow:
-    inset 0 16px 40px rgba(255, 255, 255, 0.24),
-    inset 0 -20px 44px rgba(5, 8, 18, 0.68),
-    0 20px 56px rgba(0, 0, 0, 0.5),
-    0 0 34px rgba(95, 140, 255, 0.45);
-  transition: transform 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 2.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transform-style: preserve-3d;
 }
 
+.logoMark {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 24px rgba(120, 168, 255, 0.42));
+  transform: translateZ(20px);
+}
+
 @keyframes floatLogo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .pillarCard {
@@ -290,11 +294,6 @@
     min-height: 280px;
   }
 
-  .logoHalo {
-    width: 300px;
-    height: 300px;
-  }
-
   .logoCoreShell {
     width: 208px;
     height: 208px;
@@ -338,11 +337,6 @@
     min-height: 300px;
   }
 
-  .logoHalo {
-    width: 320px;
-    height: 320px;
-  }
-
   .logoCoreShell {
     width: 220px;
     height: 220px;
@@ -375,13 +369,13 @@
     min-height: 820px;
   }
 
-  .logoHalo {
-    width: 280px;
-    height: 280px;
+  .logoCoreShell {
+    width: clamp(76px, 26vw, 120px);
+    height: clamp(76px, 26vw, 120px);
   }
 
-  .logoCoreShell {`r`n    width: clamp(76px, 26vw, 120px);`r`n    height: clamp(76px, 26vw, 120px);`r`n  }
-
-  .logoCore {`r`n    width: clamp(70px, 24vw, 112px);`r`n    height: clamp(70px, 24vw, 112px);`r`n  }
+  .logoCore {
+    width: clamp(70px, 24vw, 112px);
+    height: clamp(70px, 24vw, 112px);
+  }
 }
-
