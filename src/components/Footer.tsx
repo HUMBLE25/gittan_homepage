@@ -31,8 +31,8 @@ const Footer = () => {
             <div className={styles.footer_title_logo}></div>
             <div className={styles.footer_content_container}>
               <div className={styles.footer_content}>
-                <div>상호명: 기탄기업개발 </div>
-                <div>&nbsp;| 대표자: 박원규</div>
+                <div>상호명: 기탄산업개발 </div>
+                <div>&nbsp;| 대표자: 정원근</div>
                 <div>&nbsp;| 사업자번호: 699-05-02875 </div>
                 <div>&nbsp;| 이메일: gittan@naver.com </div>
               </div>
@@ -42,8 +42,8 @@ const Footer = () => {
                     TEL : 010-7990-5028
                   </a>
                 </div>
-                <div>&nbsp;| FAX : 0504-327-502</div>
-                <div>&nbsp;| 주소 : 경기도 의정부시 태평로 235, 2층 202호</div>
+                <div>&nbsp;| FAX : 0504-327-5028</div>
+                <div>&nbsp;| 주소 : 경기도 의왕시 오방산단3로 25 공장형사무실동 614호(삼동)</div>
               </div>
             </div>
           </div>

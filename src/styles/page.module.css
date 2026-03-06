@@ -380,13 +380,8 @@
     height: 280px;
   }
 
-  .logoCoreShell {
-    width: 194px;
-    height: 194px;
-  }
+  .logoCoreShell {`r`n    width: clamp(76px, 26vw, 120px);`r`n    height: clamp(76px, 26vw, 120px);`r`n  }
 
-  .logoCore {
-    width: 184px;
-    height: 184px;
-  }
+  .logoCore {`r`n    width: clamp(70px, 24vw, 112px);`r`n    height: clamp(70px, 24vw, 112px);`r`n  }
 }
+
