@@ -165,7 +165,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         url,
       ]);
 
-      res.status(200).json({ message: '?깅줉???꾨즺?섏뿀?듬땲??' });
+      res.status(200).json({ message: 'Registration completed successfully.' });
       return;
     }
 

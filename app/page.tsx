@@ -34,7 +34,7 @@ const SERVICE_PILLARS = [
     description: '협소 구간과 구조물 인접 현장에서도 안정적으로 보강 시공합니다.',
   },
   {
-    title: '헬릭스파일 전문 시공',
+    title: '헬리컬파일 전문 시공',
     description: '무소음·무진동 중심 공법으로 도심·민원 구간 리스크를 줄입니다.',
   },
   {
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
   const timeoutRef = useRef<number[]>([]);
 
   useEffect(() => {
-    const STEP_MS = 100;
+    const STEP_MS = 90;
     const FINAL_HOLD_MS = 0;
 
     const intervalId = window.setInterval(() => {
@@ -81,10 +81,10 @@ const Home: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const SPIN_MS = 1800;
-    const HOLD_MS = 1700;
+    const SPIN_MS = 1400;
+    const HOLD_MS = 1000;
 
-    let currentStage = 0;
+    let currentStage = 100;
     let currentAngle = 0;
 
     const schedule = (fn: () => void, delay: number) => {
@@ -144,6 +144,7 @@ const Home: React.FC = () => {
           <h1 className={styles.heroTitle}>여러분의 산업 성공 파트너, <br></br>기탄산업개발</h1>
           <p className={styles.heroDescription}>
             마이크로파일과 헬릭스파일 전문 시공으로 지반 보강의 새로운 기준을 제시합니다.
+            {/* 내진설계부터 시공까지 지진에도 안심하세요, 믿고 맡기는 보수공사 완벽한 시공력 */}
           </p>
           <div className={styles.inlineCtaWrap}>
             <a className={styles.inlineCtaPrimary} href="tel:+821079905028">
@@ -170,7 +171,7 @@ const Home: React.FC = () => {
             <p className={styles.pillarCardLabel}>AUTO SHOWCASE</p>
             <h2 className={styles.pillarCardTitle}>{activePillar.title}</h2>
             <p className={styles.pillarCardDescription}>{activePillar.description}</p>
-            <Link href="/constructionPerformance" className={styles.pillarCardLink}>
+            <Link href="/projects" className={styles.pillarCardLink}>
               시공 실적 확인하기
             </Link>
           </div>
@@ -198,6 +199,7 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
 
 
 

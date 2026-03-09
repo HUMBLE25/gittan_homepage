@@ -1,8 +1,9 @@
 // Modal.tsx
 import React from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 import styles from '../styles/modal.module.css'
-import { GalleryItem } from '../pages/gittanGallery';
+import type { GalleryItem } from '@/src/types/gallery';
 
 interface ModalProps {
   item: GalleryItem;
@@ -32,7 +33,16 @@ const ModalG: React.FC<ModalProps> = ({ item, onClose, onDeleteSuccess }) => {
           <button onClick={onDelete} className={styles.delete_button}>Delete</button>
         </div>
         <div className={styles.title}>{item.title}</div>
-        <img className={styles.Image} src={item.imageUrl} alt="Gallery" />
+        <div className={styles.imageFrame}>
+          <Image
+            className={styles.Image}
+            src={item.imageUrl}
+            alt={item.title}
+            fill
+            sizes="(max-width: 480px) 50vw, 96vw"
+            style={{ objectFit: 'contain' }}
+          />
+        </div>
         <div className={styles.item}>{item.content}</div>
         {/* <div className={styles.item}>Uploaded by: {item.name}</div> */}
         {/* <div className={styles.item}>Date: {item.creationTime.split('T')[0]}</div> */}

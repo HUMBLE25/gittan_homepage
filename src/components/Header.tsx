@@ -1,7 +1,8 @@
+﻿'use clint';
 import Link from 'next/link';
 import styles from '@/src/styles/header.module.css';
 
-// One-line summary: Top navigation without contact form route, aligned to phone/SMS-first consultation flow.
+// One-line summary: Top navigation wired to the new app-router URL structure.
 const Header: React.FC = () => {
   return (
     <div className={styles.header_container}>
@@ -10,11 +11,12 @@ const Header: React.FC = () => {
       </Link>
       <div className={styles.spacer} />
       <div className={styles.menu_wrapper}>
-        <Link href="/introduceCo" className={styles.menuItem}>회사소개</Link>
-        <Link href="/microPiles" className={styles.menuItem}>사업안내</Link>
-        <Link href="/constructionPerformance" className={styles.menuItem}>시공실적</Link>
-        <Link href="/gittanGallery" className={styles.menuItem}>기탄갤러리</Link>
-        <div className={styles.menuItem}><a href="https://blog.naver.com/gittan">공식블로그</a></div>
+        <Link href="/company" className={styles.menuItem}>회사소개</Link>
+        <Link href="/micropile" className={styles.menuItem}>마이크로파일</Link>
+        <Link href="/helix-pile" className={styles.menuItem}>헬리컬파일</Link>
+        <Link href="/projects" className={styles.menuItem}>시공실적</Link>
+        <Link href="/gallery" className={styles.menuItem}>갤러리</Link>
+        <Link href="/blog" className={styles.menuItem}>블로그</Link>
       </div>
     </div>
   );

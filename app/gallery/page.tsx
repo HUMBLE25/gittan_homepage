@@ -1,19 +1,13 @@
+﻿'use client';
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 import styles from '@/src/styles/gittanGallery.module.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Modal from '../components/modal';
-
-export interface GalleryItem {
-    id: number;
-    title: string;
-    content: string;
-    name: string;
-    imageUrl: string;
-    creationTime: string;
-    
-}
+import Header from '@/src/components/Header';
+import Footer from '@/src/components/Footer';
+import Modal from '@/src/components/modal';
+import type { GalleryItem } from '@/src/types/gallery';
 
 const GittanGallery: React.FC = () => {
     const [data, setData] =  useState<GalleryItem[] | null >(null);
@@ -88,9 +82,17 @@ const GittanGallery: React.FC = () => {
                 {selectedItem && <Modal item={selectedItem} onClose={() => setSelectedItem(null)} />}
                 {currentData && currentData.length > 0 ? (
                         <div className={styles.gallery}>
-                            {currentData.map((item, index) => (
-                                <div key={index} className={styles.gallery_item} onClick={() => setSelectedItem(item)}>
-                                    <div style={{backgroundImage: `url(${item.imageUrl})`}} className={styles.gallery_image}/>
+                            {currentData.map((item) => (
+                                <div key={item.id} className={styles.gallery_item} onClick={() => setSelectedItem(item)}>
+                                    <div className={styles.gallery_imageFrame}>
+                                        <Image
+                                            src={item.imageUrl}
+                                            alt={item.title}
+                                            fill
+                                            sizes="(max-width: 480px) 45vw, (max-width: 1024px) 30vw, 20vw"
+                                            className={styles.gallery_image}
+                                        />
+                                    </div>
                                     <div className={styles.gallery_title}>{item.title}</div>
                                     <div className={styles.gallery_content}>{item.creationTime.split('T')[0]}</div>
                                 </div>

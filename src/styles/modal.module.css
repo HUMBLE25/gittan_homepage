@@ -63,14 +63,21 @@
 
 
 .Image{
+    object-fit: contain;
+    object-position: center;
+    transition: all 1s ease;
+}
+
+.imageFrame {
     width: 96%;
-    height: auto;
-    margin: 0% 2% 0% 2%;
-    /* border: 2px solid red; */
+    min-height: 320px;
+    height: 52vh;
+    max-height: 720px;
+    position: relative;
+    margin: 0% 2% 5% 2%;
     align-items: center;
     justify-content: center;
     transition: all 1s ease;
-    margin-bottom: 5%;
 }
 
 .item{
@@ -92,14 +99,11 @@
         font-size: 8px;
     }
 
-    .Image{
+    .imageFrame {
         width: 50%;
-        height: auto;
+        min-height: 160px;
+        height: 180px;
         margin: 0% 25% 0% 25%;
-        /* border: 2px solid red; */
-        align-items: center;
-        justify-content: center;
-        transition: all 1s ease;
     }
     .modalBackground{
         height: 300px;

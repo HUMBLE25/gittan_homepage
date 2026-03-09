@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '@/src/styles/footer.module.css';
 import FixedContactBar from '@/src/components/FixedContactBar';
 

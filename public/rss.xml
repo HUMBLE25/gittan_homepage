@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>기탄산업개발</title>
+    <link>https://gittan.kr/</link>
+    <description>기탄산업개발의 주요 공법인 마이크로파일과 헬리컬파일을 소개하고, 시공실적, 갤러리, 블로그 소식을 제공하는 RSS 피드입니다.</description>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 10 Mar 2026 00:00:00 +0900</lastBuildDate>
+    <managingEditor>gittan@naver.com (기탄산업개발)</managingEditor>
+    <webMaster>gittan@naver.com (기탄산업개발)</webMaster>
+    <generator>GitHub Copilot</generator>
+
+    <item>
+      <title>기탄산업개발 홈페이지</title>
+      <link>https://gittan.kr/</link>
+      <guid>https://gittan.kr/</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>기탄산업개발 메인 페이지입니다.</description>
+    </item>
+
+    <item>
+      <title>회사소개</title>
+      <link>https://gittan.kr/company</link>
+      <guid>https://gittan.kr/company</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>기탄산업개발의 회사 소개와 CEO 인사말을 확인할 수 있습니다.</description>
+    </item>
+
+    <item>
+      <title>마이크로파일 공법</title>
+      <link>https://gittan.kr/micropile</link>
+      <guid>https://gittan.kr/micropile</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>마이크로파일 공법의 특징, 적용 분야, 시공순서, 시공도면, 시공설명서를 제공합니다.</description>
+    </item>
+
+    <item>
+      <title>헬릭스파일 공법</title>
+      <link>https://gittan.kr/helix-pile</link>
+      <guid>https://gittan.kr/helix-pile</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>헬릭스파일 공법의 특징, 적용 분야, 시공순서, 시공도면, 시공설명서를 제공합니다.</description>
+    </item>
+
+    <item>
+      <title>시공실적</title>
+      <link>https://gittan.kr/projects</link>
+      <guid>https://gittan.kr/projects</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>기탄산업개발의 주요 시공실적을 확인할 수 있습니다.</description>
+    </item>
+
+    <item>
+      <title>기탄갤러리</title>
+      <link>https://gittan.kr/gallery</link>
+      <guid>https://gittan.kr/gallery</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>현장 이미지와 시공 관련 갤러리 콘텐츠를 제공합니다.</description>
+    </item>
+
+    <item>
+      <title>공식 블로그</title>
+      <link>https://gittan.kr/blog</link>
+      <guid>https://gittan.kr/blog</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0900</pubDate>
+      <description>기탄산업개발 공식 블로그 안내 페이지입니다.</description>
+    </item>
+  </channel>
+</rss>
